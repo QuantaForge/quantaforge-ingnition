@@ -191,7 +191,7 @@ class IgnitionServiceProvider extends ServiceProvider
 
     protected function configureOctane(): void
     {
-        if (isset($_SERVER['LARAVEL_OCTANE'])) {
+        if (isset($_SERVER['QUANTAQUIRK_OCTANE'])) {
             $this->setupOctane();
         }
     }

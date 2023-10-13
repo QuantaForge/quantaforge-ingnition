@@ -14,7 +14,7 @@ class SailNetworkSolutionProvider implements HasSolutionsForThrowable
             && str_contains($throwable->getMessage(), 'php_network_getaddresses')
             && file_exists(base_path('vendor/bin/sail'))
             && file_exists(base_path('docker-compose.yml'))
-            && env('LARAVEL_SAIL') === null;
+            && env('QUANTAQUIRK_SAIL') === null;
     }
 
     public function getSolutions(Throwable $throwable): array
