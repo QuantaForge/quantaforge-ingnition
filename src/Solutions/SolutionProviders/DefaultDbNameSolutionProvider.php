@@ -1,10 +1,10 @@
 <?php
 
-namespace QuantaQuirk\QuantaQuirkIgnition\Solutions\SolutionProviders;
+namespace QuantaForge\QuantaForgeIgnition\Solutions\SolutionProviders;
 
-use QuantaQuirk\Database\QueryException;
-use QuantaQuirk\Ignition\Contracts\HasSolutionsForThrowable;
-use QuantaQuirk\QuantaQuirkIgnition\Solutions\SuggestUsingCorrectDbNameSolution;
+use QuantaForge\Database\QueryException;
+use QuantaForge\Ignition\Contracts\HasSolutionsForThrowable;
+use QuantaForge\QuantaForgeIgnition\Solutions\SuggestUsingCorrectDbNameSolution;
 use Throwable;
 
 class DefaultDbNameSolutionProvider implements HasSolutionsForThrowable
@@ -21,7 +21,7 @@ class DefaultDbNameSolutionProvider implements HasSolutionsForThrowable
             return false;
         }
 
-        if (! in_array(env('DB_DATABASE'), ['homestead', 'quantaquirk'])) {
+        if (! in_array(env('DB_DATABASE'), ['homestead', 'quantaforge'])) {
             return false;
         }
 

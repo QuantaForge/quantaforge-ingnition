@@ -1,11 +1,11 @@
 <?php
 
-namespace QuantaQuirk\QuantaQuirkIgnition\Solutions\SolutionProviders;
+namespace QuantaForge\QuantaForgeIgnition\Solutions\SolutionProviders;
 
-use QuantaQuirk\Database\LazyLoadingViolationException;
-use QuantaQuirk\Ignition\Contracts\BaseSolution;
-use QuantaQuirk\Ignition\Contracts\HasSolutionsForThrowable;
-use QuantaQuirk\QuantaQuirkIgnition\Support\QuantaQuirkVersion;
+use QuantaForge\Database\LazyLoadingViolationException;
+use QuantaForge\Ignition\Contracts\BaseSolution;
+use QuantaForge\Ignition\Contracts\HasSolutionsForThrowable;
+use QuantaForge\QuantaForgeIgnition\Support\QuantaForgeVersion;
 use Throwable;
 
 class LazyLoadingViolationSolutionProvider implements HasSolutionsForThrowable
@@ -25,7 +25,7 @@ class LazyLoadingViolationSolutionProvider implements HasSolutionsForThrowable
 
     public function getSolutions(Throwable $throwable): array
     {
-        $majorVersion = QuantaQuirkVersion::major();
+        $majorVersion = QuantaForgeVersion::major();
 
         return [BaseSolution::create(
             'Lazy loading was disabled to detect N+1 problems'
@@ -34,7 +34,7 @@ class LazyLoadingViolationSolutionProvider implements HasSolutionsForThrowable
                 'Either avoid lazy loading the relation or allow lazy loading.'
             )
             ->setDocumentationLinks([
-                'Read the docs on preventing lazy loading' => "https://quantaquirk.com/docs/{$majorVersion}.x/eloquent-relationships#preventing-lazy-loading",
+                'Read the docs on preventing lazy loading' => "https://quantaforge.com/docs/{$majorVersion}.x/eloquent-relationships#preventing-lazy-loading",
                 'Watch a video on how to deal with the N+1 problem' => 'https://www.youtube.com/watch?v=ZE7KBeraVpc',
             ]),];
     }

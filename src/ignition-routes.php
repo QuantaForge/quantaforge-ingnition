@@ -1,10 +1,10 @@
 <?php
 
-use QuantaQuirk\Support\Facades\Route;
-use QuantaQuirk\QuantaQuirkIgnition\Http\Controllers\ExecuteSolutionController;
-use QuantaQuirk\QuantaQuirkIgnition\Http\Controllers\HealthCheckController;
-use QuantaQuirk\QuantaQuirkIgnition\Http\Controllers\UpdateConfigController;
-use QuantaQuirk\QuantaQuirkIgnition\Http\Middleware\RunnableSolutionsEnabled;
+use QuantaForge\Support\Facades\Route;
+use QuantaForge\QuantaForgeIgnition\Http\Controllers\ExecuteSolutionController;
+use QuantaForge\QuantaForgeIgnition\Http\Controllers\HealthCheckController;
+use QuantaForge\QuantaForgeIgnition\Http\Controllers\UpdateConfigController;
+use QuantaForge\QuantaForgeIgnition\Http\Middleware\RunnableSolutionsEnabled;
 
 Route::group([
     'as' => 'ignition.',

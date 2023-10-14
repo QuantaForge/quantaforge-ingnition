@@ -1,11 +1,11 @@
 <?php
 
-namespace QuantaQuirk\QuantaQuirkIgnition\FlareMiddleware;
+namespace QuantaForge\QuantaForgeIgnition\FlareMiddleware;
 
 use Closure;
-use QuantaQuirk\FlareClient\FlareMiddleware\FlareMiddleware;
-use QuantaQuirk\FlareClient\Report;
-use QuantaQuirk\QuantaQuirkIgnition\Recorders\DumpRecorder\DumpRecorder;
+use QuantaForge\FlareClient\FlareMiddleware\FlareMiddleware;
+use QuantaForge\FlareClient\Report;
+use QuantaForge\QuantaForgeIgnition\Recorders\DumpRecorder\DumpRecorder;
 
 class AddDumps implements FlareMiddleware
 {

@@ -1,8 +1,8 @@
 <?php
 
-namespace QuantaQuirk\QuantaQuirkIgnition\Renderers;
+namespace QuantaForge\QuantaForgeIgnition\Renderers;
 
-use QuantaQuirk\Contracts\Foundation\ExceptionRenderer;
+use QuantaForge\Contracts\Foundation\ExceptionRenderer;
 
 class IgnitionExceptionRenderer implements ExceptionRenderer
 {

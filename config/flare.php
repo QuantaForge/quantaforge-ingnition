@@ -1,16 +1,16 @@
 <?php
 
-use QuantaQuirk\FlareClient\FlareMiddleware\AddGitInformation;
-use QuantaQuirk\FlareClient\FlareMiddleware\RemoveRequestIp;
-use QuantaQuirk\FlareClient\FlareMiddleware\CensorRequestBodyFields;
-use QuantaQuirk\FlareClient\FlareMiddleware\CensorRequestHeaders;
-use QuantaQuirk\QuantaQuirkIgnition\FlareMiddleware\AddDumps;
-use QuantaQuirk\QuantaQuirkIgnition\FlareMiddleware\AddEnvironmentInformation;
-use QuantaQuirk\QuantaQuirkIgnition\FlareMiddleware\AddExceptionInformation;
-use QuantaQuirk\QuantaQuirkIgnition\FlareMiddleware\AddJobs;
-use QuantaQuirk\QuantaQuirkIgnition\FlareMiddleware\AddLogs;
-use QuantaQuirk\QuantaQuirkIgnition\FlareMiddleware\AddQueries;
-use QuantaQuirk\QuantaQuirkIgnition\FlareMiddleware\AddNotifierName;
+use QuantaForge\FlareClient\FlareMiddleware\AddGitInformation;
+use QuantaForge\FlareClient\FlareMiddleware\RemoveRequestIp;
+use QuantaForge\FlareClient\FlareMiddleware\CensorRequestBodyFields;
+use QuantaForge\FlareClient\FlareMiddleware\CensorRequestHeaders;
+use QuantaForge\QuantaForgeIgnition\FlareMiddleware\AddDumps;
+use QuantaForge\QuantaForgeIgnition\FlareMiddleware\AddEnvironmentInformation;
+use QuantaForge\QuantaForgeIgnition\FlareMiddleware\AddExceptionInformation;
+use QuantaForge\QuantaForgeIgnition\FlareMiddleware\AddJobs;
+use QuantaForge\QuantaForgeIgnition\FlareMiddleware\AddLogs;
+use QuantaForge\QuantaForgeIgnition\FlareMiddleware\AddQueries;
+use QuantaForge\QuantaForgeIgnition\FlareMiddleware\AddNotifierName;
 
 return [
     /*

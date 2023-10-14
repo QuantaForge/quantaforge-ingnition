@@ -1,8 +1,8 @@
 <?php
 
-namespace QuantaQuirk\QuantaQuirkIgnition\Recorders\QueryRecorder;
+namespace QuantaForge\QuantaForgeIgnition\Recorders\QueryRecorder;
 
-use QuantaQuirk\Database\Events\QueryExecuted;
+use QuantaForge\Database\Events\QueryExecuted;
 
 class Query
 {

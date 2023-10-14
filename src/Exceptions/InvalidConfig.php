@@ -1,12 +1,12 @@
 <?php
 
-namespace QuantaQuirk\QuantaQuirkIgnition\Exceptions;
+namespace QuantaForge\QuantaForgeIgnition\Exceptions;
 
 use Exception;
 use Monolog\Level;
-use QuantaQuirk\Ignition\Contracts\BaseSolution;
-use QuantaQuirk\Ignition\Contracts\ProvidesSolution;
-use QuantaQuirk\Ignition\Contracts\Solution;
+use QuantaForge\Ignition\Contracts\BaseSolution;
+use QuantaForge\Ignition\Contracts\ProvidesSolution;
+use QuantaForge\Ignition\Contracts\Solution;
 
 class InvalidConfig extends Exception implements ProvidesSolution
 {

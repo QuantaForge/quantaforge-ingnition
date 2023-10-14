@@ -1,9 +1,9 @@
 <?php
 
-use QuantaQuirk\Support\Facades\Artisan;
-use QuantaQuirk\Support\Facades\View;
-use QuantaQuirk\FlareClient\Flare;
-use QuantaQuirk\QuantaQuirkIgnition\Tests\Mocks\FakeClient;
+use QuantaForge\Support\Facades\Artisan;
+use QuantaForge\Support\Facades\View;
+use QuantaForge\FlareClient\Flare;
+use QuantaForge\QuantaForgeIgnition\Tests\Mocks\FakeClient;
 
 beforeEach(function () {
     Artisan::call('view:clear');
@@ -27,9 +27,9 @@ beforeEach(function () {
 });
 
 it('can manually report exceptions', function () {
-    \QuantaQuirk\QuantaQuirkIgnition\Facades\Flare::sendReportsImmediately();
+    \QuantaForge\QuantaForgeIgnition\Facades\Flare::sendReportsImmediately();
 
-    \QuantaQuirk\QuantaQuirkIgnition\Facades\Flare::report(new Exception());
+    \QuantaForge\QuantaForgeIgnition\Facades\Flare::report(new Exception());
 
     $this->fakeClient->assertRequestsSent(1);
 });

@@ -1,11 +1,11 @@
 <?php
 
-namespace QuantaQuirk\QuantaQuirkIgnition\Solutions\SolutionProviders;
+namespace QuantaForge\QuantaForgeIgnition\Solutions\SolutionProviders;
 
-use QuantaQuirk\Support\Str;
+use QuantaForge\Support\Str;
 use OpenAI\Client;
-use QuantaQuirk\Ignition\Contracts\HasSolutionsForThrowable;
-use QuantaQuirk\Ignition\Solutions\OpenAi\OpenAiSolutionProvider as BaseOpenAiSolutionProvider;
+use QuantaForge\Ignition\Contracts\HasSolutionsForThrowable;
+use QuantaForge\Ignition\Solutions\OpenAi\OpenAiSolutionProvider as BaseOpenAiSolutionProvider;
 use Throwable;
 
 class OpenAiSolutionProvider implements HasSolutionsForThrowable
@@ -29,7 +29,7 @@ class OpenAiSolutionProvider implements HasSolutionsForThrowable
             openAiKey: config('ignition.open_ai_key'),
             cache: cache()->store(config('cache.default')),
             cacheTtlInSeconds: 60,
-            applicationType: 'QuantaQuirk ' . Str::before(app()->version(), '.'),
+            applicationType: 'QuantaForge ' . Str::before(app()->version(), '.'),
             applicationPath: base_path(),
         );
 

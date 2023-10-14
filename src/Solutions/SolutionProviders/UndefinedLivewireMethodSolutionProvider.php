@@ -1,11 +1,11 @@
 <?php
 
-namespace QuantaQuirk\QuantaQuirkIgnition\Solutions\SolutionProviders;
+namespace QuantaForge\QuantaForgeIgnition\Solutions\SolutionProviders;
 
 use Livewire\Exceptions\MethodNotFoundException;
-use QuantaQuirk\Ignition\Contracts\HasSolutionsForThrowable;
-use QuantaQuirk\QuantaQuirkIgnition\Solutions\SuggestLivewireMethodNameSolution;
-use QuantaQuirk\QuantaQuirkIgnition\Support\LivewireComponentParser;
+use QuantaForge\Ignition\Contracts\HasSolutionsForThrowable;
+use QuantaForge\QuantaForgeIgnition\Solutions\SuggestLivewireMethodNameSolution;
+use QuantaForge\QuantaForgeIgnition\Support\LivewireComponentParser;
 use Throwable;
 
 class UndefinedLivewireMethodSolutionProvider implements HasSolutionsForThrowable

@@ -1,8 +1,8 @@
 <?php
 
-namespace QuantaQuirk\QuantaQuirkIgnition\Recorders\LogRecorder;
+namespace QuantaForge\QuantaForgeIgnition\Recorders\LogRecorder;
 
-use QuantaQuirk\Log\Events\MessageLogged;
+use QuantaForge\Log\Events\MessageLogged;
 
 class LogMessage
 {

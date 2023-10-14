@@ -1,9 +1,9 @@
 <?php
 
-use QuantaQuirk\Foundation\Auth\User;
-use QuantaQuirk\Support\Collection;
-use QuantaQuirk\QuantaQuirkIgnition\Facades\Flare;
-use QuantaQuirk\QuantaQuirkIgnition\Tests\TestClasses\FakeArgumentsReducer;
+use QuantaForge\Foundation\Auth\User;
+use QuantaForge\Support\Collection;
+use QuantaForge\QuantaForgeIgnition\Facades\Flare;
+use QuantaForge\QuantaForgeIgnition\Tests\TestClasses\FakeArgumentsReducer;
 
 beforeEach(function () {
     ini_set('zend.exception_ignore_args', 0); // Enabled on GH actions

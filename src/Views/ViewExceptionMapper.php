@@ -1,19 +1,19 @@
 <?php
 
-namespace QuantaQuirk\QuantaQuirkIgnition\Views;
+namespace QuantaForge\QuantaForgeIgnition\Views;
 
 use Exception;
-use QuantaQuirk\Contracts\View\Engine;
-use QuantaQuirk\Foundation\Application;
-use QuantaQuirk\Support\Arr;
-use QuantaQuirk\Support\Collection;
-use QuantaQuirk\View\Engines\PhpEngine;
-use QuantaQuirk\View\ViewException;
+use QuantaForge\Contracts\View\Engine;
+use QuantaForge\Foundation\Application;
+use QuantaForge\Support\Arr;
+use QuantaForge\Support\Collection;
+use QuantaForge\View\Engines\PhpEngine;
+use QuantaForge\View\ViewException;
 use ReflectionClass;
 use ReflectionProperty;
-use QuantaQuirk\Ignition\Contracts\ProvidesSolution;
-use QuantaQuirk\QuantaQuirkIgnition\Exceptions\ViewException as IgnitionViewException;
-use QuantaQuirk\QuantaQuirkIgnition\Exceptions\ViewExceptionWithSolution;
+use QuantaForge\Ignition\Contracts\ProvidesSolution;
+use QuantaForge\QuantaForgeIgnition\Exceptions\ViewException as IgnitionViewException;
+use QuantaForge\QuantaForgeIgnition\Exceptions\ViewExceptionWithSolution;
 use Throwable;
 
 class ViewExceptionMapper
@@ -164,7 +164,7 @@ class ViewExceptionMapper
 
     protected function filterViewData(array $data): array
     {
-        // By default, QuantaQuirk views get two data keys:
+        // By default, QuantaForge views get two data keys:
         // __env and app. We try to filter them out.
         return array_filter($data, function ($value, $key) {
             if ($key === 'app') {

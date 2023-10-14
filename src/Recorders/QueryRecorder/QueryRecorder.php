@@ -1,13 +1,13 @@
 <?php
 
-namespace QuantaQuirk\QuantaQuirkIgnition\Recorders\QueryRecorder;
+namespace QuantaForge\QuantaForgeIgnition\Recorders\QueryRecorder;
 
-use QuantaQuirk\Contracts\Foundation\Application;
-use QuantaQuirk\Database\Events\QueryExecuted;
+use QuantaForge\Contracts\Foundation\Application;
+use QuantaForge\Database\Events\QueryExecuted;
 
 class QueryRecorder
 {
-    /** @var \QuantaQuirk\QuantaQuirkIgnition\Recorders\QueryRecorder\Query[] */
+    /** @var \QuantaForge\QuantaForgeIgnition\Recorders\QueryRecorder\Query[] */
     protected array $queries = [];
 
     protected Application $app;

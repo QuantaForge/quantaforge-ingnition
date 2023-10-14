@@ -1,7 +1,7 @@
 <?php
 
-use QuantaQuirk\Support\Facades\Route;
-use QuantaQuirk\Support\Str;
+use QuantaForge\Support\Facades\Route;
+use QuantaForge\Support\Str;
 
 beforeEach(function () {
     config()->set('app.debug', true);
@@ -21,7 +21,7 @@ test('when requesting html it will respond with html', function () {
 });
 
 test('when requesting json it will respond with json', function () {
-    /** @var \QuantaQuirk\Http\Response $response */
+    /** @var \QuantaForge\Http\Response $response */
     $response = $this->getJson('will-fail');
 
     expect($response->headers->get('Content-Type'))->toStartWith('application/json');

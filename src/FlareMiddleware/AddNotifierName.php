@@ -1,13 +1,13 @@
 <?php
 
-namespace QuantaQuirk\QuantaQuirkIgnition\FlareMiddleware;
+namespace QuantaForge\QuantaForgeIgnition\FlareMiddleware;
 
-use QuantaQuirk\FlareClient\FlareMiddleware\FlareMiddleware;
-use QuantaQuirk\FlareClient\Report;
+use QuantaForge\FlareClient\FlareMiddleware\FlareMiddleware;
+use QuantaForge\FlareClient\Report;
 
 class AddNotifierName implements FlareMiddleware
 {
-    public const NOTIFIER_NAME = 'QuantaQuirk Client';
+    public const NOTIFIER_NAME = 'QuantaForge Client';
 
     public function handle(Report $report, $next)
     {

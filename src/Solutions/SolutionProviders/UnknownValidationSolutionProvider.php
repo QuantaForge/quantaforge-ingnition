@@ -1,21 +1,21 @@
 <?php
 
-namespace QuantaQuirk\QuantaQuirkIgnition\Solutions\SolutionProviders;
+namespace QuantaForge\QuantaForgeIgnition\Solutions\SolutionProviders;
 
 use BadMethodCallException;
-use QuantaQuirk\Support\Collection;
-use QuantaQuirk\Support\Str;
-use QuantaQuirk\Validation\Validator;
+use QuantaForge\Support\Collection;
+use QuantaForge\Support\Str;
+use QuantaForge\Validation\Validator;
 use ReflectionClass;
 use ReflectionMethod;
-use QuantaQuirk\Ignition\Contracts\BaseSolution;
-use QuantaQuirk\Ignition\Contracts\HasSolutionsForThrowable;
-use QuantaQuirk\QuantaQuirkIgnition\Support\StringComparator;
+use QuantaForge\Ignition\Contracts\BaseSolution;
+use QuantaForge\Ignition\Contracts\HasSolutionsForThrowable;
+use QuantaForge\QuantaForgeIgnition\Support\StringComparator;
 use Throwable;
 
 class UnknownValidationSolutionProvider implements HasSolutionsForThrowable
 {
-    protected const REGEX = '/QuantaQuirk\\\\Validation\\\\Validator::(?P<method>validate(?!(Attribute|UsingCustomRule))[A-Z][a-zA-Z]+)/m';
+    protected const REGEX = '/QuantaForge\\\\Validation\\\\Validator::(?P<method>validate(?!(Attribute|UsingCustomRule))[A-Z][a-zA-Z]+)/m';
 
     public function canSolve(Throwable $throwable): bool
     {

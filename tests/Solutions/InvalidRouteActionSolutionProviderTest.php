@@ -1,10 +1,10 @@
 <?php
 
-use QuantaQuirk\Support\Facades\Route;
-use QuantaQuirk\Support\Str;
-use QuantaQuirk\QuantaQuirkIgnition\Solutions\SolutionProviders\InvalidRouteActionSolutionProvider;
-use QuantaQuirk\QuantaQuirkIgnition\Support\Composer\ComposerClassMap;
-use QuantaQuirk\QuantaQuirkIgnition\Tests\stubs\Controllers\TestTypoController;
+use QuantaForge\Support\Facades\Route;
+use QuantaForge\Support\Str;
+use QuantaForge\QuantaForgeIgnition\Solutions\SolutionProviders\InvalidRouteActionSolutionProvider;
+use QuantaForge\QuantaForgeIgnition\Support\Composer\ComposerClassMap;
+use QuantaForge\QuantaForgeIgnition\Tests\stubs\Controllers\TestTypoController;
 
 beforeEach(function () {
     app()->bind(
@@ -24,7 +24,7 @@ it('can solve the exception', function () {
 it('can recommend changing the routes method', function () {
     Route::get('/test', TestTypoController::class);
 
-    /** @var \QuantaQuirk\Ignition\Contracts\Solution $solution */
+    /** @var \QuantaForge\Ignition\Contracts\Solution $solution */
     $solution = app(InvalidRouteActionSolutionProvider::class)->getSolutions(getInvalidRouteActionException())[0];
 
     expect(Str::contains($solution->getSolutionDescription(), 'Did you mean `TestTypoController`'))->toBeTrue();
@@ -35,7 +35,7 @@ it('wont recommend another controller class if the names are too different', fun
 
     $invalidController = 'UnrelatedTestTypoController';
 
-    /** @var \QuantaQuirk\Ignition\Contracts\Solution $solution */
+    /** @var \QuantaForge\Ignition\Contracts\Solution $solution */
     $solution = app(InvalidRouteActionSolutionProvider::class)->getSolutions(getInvalidRouteActionException($invalidController))[0];
 
     expect(Str::contains($solution->getSolutionDescription(), 'Did you mean `TestTypoController`'))->toBeFalse();

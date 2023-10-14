@@ -1,6 +1,6 @@
 <?php
 
-use QuantaQuirk\QuantaQuirkIgnition\Support\Composer\ComposerClassMap;
+use QuantaForge\QuantaForgeIgnition\Support\Composer\ComposerClassMap;
 
 it('uses fake classmap if the autoloader does not exist', function () {
     $classMap = new ComposerClassMap('invalid');

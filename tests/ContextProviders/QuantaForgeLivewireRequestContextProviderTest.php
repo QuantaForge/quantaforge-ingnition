@@ -1,9 +1,9 @@
 <?php
 
-use QuantaQuirk\Http\Request;
-use QuantaQuirk\Support\Facades\Route;
-use QuantaQuirk\QuantaQuirkIgnition\ContextProviders\QuantaQuirkLivewireRequestContextProvider;
-use QuantaQuirk\QuantaQuirkIgnition\Tests\TestClasses\FakeLivewireManager;
+use QuantaForge\Http\Request;
+use QuantaForge\Support\Facades\Route;
+use QuantaForge\QuantaForgeIgnition\ContextProviders\QuantaForgeLivewireRequestContextProvider;
+use QuantaForge\QuantaForgeIgnition\Tests\TestClasses\FakeLivewireManager;
 
 beforeEach(function () {
     $this->livewireManager = FakeLivewireManager::setUp();
@@ -154,7 +154,7 @@ it('combines data into one payload', function () {
 });
 
 // Helpers
-function createRequestContext(array $fingerprint, array $updates = [], array $serverMemo = []): QuantaQuirkLivewireRequestContextProvider
+function createRequestContext(array $fingerprint, array $updates = [], array $serverMemo = []): QuantaForgeLivewireRequestContextProvider
 {
     $providedRequest = null;
 
@@ -168,5 +168,5 @@ function createRequestContext(array $fingerprint, array $updates = [], array $se
         'updates' => $updates,
     ]);
 
-    return new QuantaQuirkLivewireRequestContextProvider($providedRequest, test()->livewireManager);
+    return new QuantaForgeLivewireRequestContextProvider($providedRequest, test()->livewireManager);
 }

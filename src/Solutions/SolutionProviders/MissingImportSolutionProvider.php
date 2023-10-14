@@ -1,10 +1,10 @@
 <?php
 
-namespace QuantaQuirk\QuantaQuirkIgnition\Solutions\SolutionProviders;
+namespace QuantaForge\QuantaForgeIgnition\Solutions\SolutionProviders;
 
-use QuantaQuirk\Ignition\Contracts\HasSolutionsForThrowable;
-use QuantaQuirk\QuantaQuirkIgnition\Solutions\SuggestImportSolution;
-use QuantaQuirk\QuantaQuirkIgnition\Support\Composer\ComposerClassMap;
+use QuantaForge\Ignition\Contracts\HasSolutionsForThrowable;
+use QuantaForge\QuantaForgeIgnition\Solutions\SuggestImportSolution;
+use QuantaForge\QuantaForgeIgnition\Support\Composer\ComposerClassMap;
 use Throwable;
 
 class MissingImportSolutionProvider implements HasSolutionsForThrowable

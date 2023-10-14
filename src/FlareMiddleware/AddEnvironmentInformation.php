@@ -1,10 +1,10 @@
 <?php
 
-namespace QuantaQuirk\QuantaQuirkIgnition\FlareMiddleware;
+namespace QuantaForge\QuantaForgeIgnition\FlareMiddleware;
 
 use Closure;
-use QuantaQuirk\FlareClient\FlareMiddleware\FlareMiddleware;
-use QuantaQuirk\FlareClient\Report;
+use QuantaForge\FlareClient\FlareMiddleware\FlareMiddleware;
+use QuantaForge\FlareClient\Report;
 
 class AddEnvironmentInformation implements FlareMiddleware
 {
@@ -13,9 +13,9 @@ class AddEnvironmentInformation implements FlareMiddleware
         $report->frameworkVersion(app()->version());
 
         $report->group('env', [
-            'quantaquirk_version' => app()->version(),
-            'quantaquirk_locale' => app()->getLocale(),
-            'quantaquirk_config_cached' => app()->configurationIsCached(),
+            'quantaforge_version' => app()->version(),
+            'quantaforge_locale' => app()->getLocale(),
+            'quantaforge_config_cached' => app()->configurationIsCached(),
             'app_debug' => config('app.debug'),
             'app_env' => config('app.env'),
             'php_version' => phpversion(),

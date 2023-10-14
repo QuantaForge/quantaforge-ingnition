@@ -1,10 +1,10 @@
 <?php
 
-namespace QuantaQuirk\QuantaQuirkIgnition\Tests\TestClasses;
+namespace QuantaForge\QuantaForgeIgnition\Tests\TestClasses;
 
-use QuantaQuirk\Ignition\Contracts\BaseSolution;
-use QuantaQuirk\Ignition\Contracts\ProvidesSolution;
-use QuantaQuirk\Ignition\Contracts\Solution;
+use QuantaForge\Ignition\Contracts\BaseSolution;
+use QuantaForge\Ignition\Contracts\ProvidesSolution;
+use QuantaForge\Ignition\Contracts\Solution;
 
 class ExceptionWithSolution extends \Exception implements ProvidesSolution
 {

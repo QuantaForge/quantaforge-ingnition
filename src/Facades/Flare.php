@@ -1,22 +1,22 @@
 <?php
 
-namespace QuantaQuirk\QuantaQuirkIgnition\Facades;
+namespace QuantaForge\QuantaForgeIgnition\Facades;
 
-use QuantaQuirk\Support\Facades\Facade;
-use QuantaQuirk\QuantaQuirkIgnition\Support\SentReports;
+use QuantaForge\Support\Facades\Facade;
+use QuantaForge\QuantaForgeIgnition\Support\SentReports;
 
 /**
- * @method static void glow(string $name, string $messageLevel = \QuantaQuirk\FlareClient\Enums\MessageLevels::INFO, array $metaData = [])
+ * @method static void glow(string $name, string $messageLevel = \QuantaForge\FlareClient\Enums\MessageLevels::INFO, array $metaData = [])
  * @method static void context($key, $value)
  * @method static void group(string $groupName, array $properties)
  *
- * @see \QuantaQuirk\FlareClient\Flare
+ * @see \QuantaForge\FlareClient\Flare
  */
 class Flare extends Facade
 {
     protected static function getFacadeAccessor()
     {
-        return \QuantaQuirk\FlareClient\Flare::class;
+        return \QuantaForge\FlareClient\Flare::class;
     }
 
     public static function sentReports(): SentReports

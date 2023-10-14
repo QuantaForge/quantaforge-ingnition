@@ -1,8 +1,8 @@
 <?php
 
-namespace QuantaQuirk\QuantaQuirkIgnition\Solutions;
+namespace QuantaForge\QuantaForgeIgnition\Solutions;
 
-use QuantaQuirk\Ignition\Contracts\Solution;
+use QuantaForge\Ignition\Contracts\Solution;
 
 class SuggestLivewirePropertyNameSolution implements Solution
 {

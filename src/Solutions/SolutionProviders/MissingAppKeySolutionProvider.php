@@ -1,10 +1,10 @@
 <?php
 
-namespace QuantaQuirk\QuantaQuirkIgnition\Solutions\SolutionProviders;
+namespace QuantaForge\QuantaForgeIgnition\Solutions\SolutionProviders;
 
 use RuntimeException;
-use QuantaQuirk\Ignition\Contracts\HasSolutionsForThrowable;
-use QuantaQuirk\QuantaQuirkIgnition\Solutions\GenerateAppKeySolution;
+use QuantaForge\Ignition\Contracts\HasSolutionsForThrowable;
+use QuantaForge\QuantaForgeIgnition\Solutions\GenerateAppKeySolution;
 use Throwable;
 
 class MissingAppKeySolutionProvider implements HasSolutionsForThrowable

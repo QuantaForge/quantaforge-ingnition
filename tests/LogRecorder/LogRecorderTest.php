@@ -1,7 +1,7 @@
 <?php
 
-use QuantaQuirk\Log\Events\MessageLogged;
-use QuantaQuirk\QuantaQuirkIgnition\Recorders\LogRecorder\LogRecorder;
+use QuantaForge\Log\Events\MessageLogged;
+use QuantaForge\QuantaForgeIgnition\Recorders\LogRecorder\LogRecorder;
 
 it('limits the amount of recorded logs', function () {
     $recorder = new LogRecorder(app(), 200);

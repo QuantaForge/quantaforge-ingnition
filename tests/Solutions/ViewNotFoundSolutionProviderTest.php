@@ -1,8 +1,8 @@
 <?php
 
-use QuantaQuirk\Support\Facades\View;
-use QuantaQuirk\Support\Str;
-use QuantaQuirk\QuantaQuirkIgnition\Solutions\SolutionProviders\ViewNotFoundSolutionProvider;
+use QuantaForge\Support\Facades\View;
+use QuantaForge\Support\Str;
+use QuantaForge\QuantaForgeIgnition\Solutions\SolutionProviders\ViewNotFoundSolutionProvider;
 
 beforeEach(function () {
     View::addLocation(__DIR__.'/../stubs/views');
@@ -15,7 +15,7 @@ it('can solve the exception', function () {
 });
 
 it('can recommend changing a typo in the view name', function () {
-    /** @var \QuantaQuirk\Ignition\Contracts\Solution $solution */
+    /** @var \QuantaForge\Ignition\Contracts\Solution $solution */
     $solution = app(ViewNotFoundSolutionProvider::class)->getSolutions(getViewNotFoundException())[0];
 
     expect(Str::contains($solution->getSolutionDescription(), 'Did you mean `php-exception`?'))->toBeTrue();
@@ -24,7 +24,7 @@ it('can recommend changing a typo in the view name', function () {
 it('wont recommend another controller class if the names are too different', function () {
     $unknownView = 'a-view-that-doesnt-exist-and-is-not-a-typo';
 
-    /** @var \QuantaQuirk\Ignition\Contracts\Solution $solution */
+    /** @var \QuantaForge\Ignition\Contracts\Solution $solution */
     $solution = app(ViewNotFoundSolutionProvider::class)->getSolutions(getViewNotFoundException($unknownView))[0];
 
     expect(Str::contains($solution->getSolutionDescription(), 'Did you mean'))->toBeFalse();

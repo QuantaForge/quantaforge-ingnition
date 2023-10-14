@@ -1,9 +1,9 @@
 <?php
 
-namespace QuantaQuirk\QuantaQuirkIgnition\Solutions;
+namespace QuantaForge\QuantaForgeIgnition\Solutions;
 
-use QuantaQuirk\Support\Facades\Artisan;
-use QuantaQuirk\Ignition\Contracts\RunnableSolution;
+use QuantaForge\Support\Facades\Artisan;
+use QuantaForge\Ignition\Contracts\RunnableSolution;
 
 class GenerateAppKeySolution implements RunnableSolution
 {
@@ -15,7 +15,7 @@ class GenerateAppKeySolution implements RunnableSolution
     public function getDocumentationLinks(): array
     {
         return [
-            'QuantaQuirk installation' => 'https://quantaquirk.com/docs/master/installation#configuration',
+            'QuantaForge installation' => 'https://quantaforge.com/docs/master/installation#configuration',
         ];
     }
 

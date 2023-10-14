@@ -1,7 +1,7 @@
 <?php
 
-use QuantaQuirk\Support\Facades\Route;
-use QuantaQuirk\QuantaQuirkIgnition\Http\Middleware\RunnableSolutionsEnabled;
+use QuantaForge\Support\Facades\Route;
+use QuantaForge\QuantaForgeIgnition\Http\Middleware\RunnableSolutionsEnabled;
 
 it('returns 404 with debug mode disabled', function () {
     config()->set('app.debug', false);

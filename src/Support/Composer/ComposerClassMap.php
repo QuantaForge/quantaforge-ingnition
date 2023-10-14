@@ -1,16 +1,16 @@
 <?php
 
-namespace QuantaQuirk\QuantaQuirkIgnition\Support\Composer;
+namespace QuantaForge\QuantaForgeIgnition\Support\Composer;
 
 use function app_path;
 use function base_path;
-use QuantaQuirk\Support\Str;
+use QuantaForge\Support\Str;
 use Symfony\Component\Finder\Finder;
 use Symfony\Component\Finder\SplFileInfo;
 
 class ComposerClassMap
 {
-    /** @var \QuantaQuirk\QuantaQuirkIgnition\Support\Composer\Composer */
+    /** @var \QuantaForge\QuantaForgeIgnition\Support\Composer\Composer */
     protected object $composer;
 
     protected string $basePath;

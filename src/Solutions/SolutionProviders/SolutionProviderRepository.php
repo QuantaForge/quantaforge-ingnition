@@ -1,12 +1,12 @@
 <?php
 
-namespace QuantaQuirk\QuantaQuirkIgnition\Solutions\SolutionProviders;
+namespace QuantaForge\QuantaForgeIgnition\Solutions\SolutionProviders;
 
-use QuantaQuirk\Support\Collection;
-use QuantaQuirk\Ignition\Contracts\HasSolutionsForThrowable;
-use QuantaQuirk\Ignition\Contracts\ProvidesSolution;
-use QuantaQuirk\Ignition\Contracts\Solution;
-use QuantaQuirk\Ignition\Contracts\SolutionProviderRepository as SolutionProviderRepositoryContract;
+use QuantaForge\Support\Collection;
+use QuantaForge\Ignition\Contracts\HasSolutionsForThrowable;
+use QuantaForge\Ignition\Contracts\ProvidesSolution;
+use QuantaForge\Ignition\Contracts\Solution;
+use QuantaForge\Ignition\Contracts\SolutionProviderRepository as SolutionProviderRepositoryContract;
 use Throwable;
 
 class SolutionProviderRepository implements SolutionProviderRepositoryContract

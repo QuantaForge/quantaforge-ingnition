@@ -1,8 +1,8 @@
 <?php
 
-use QuantaQuirk\Foundation\Auth\User;
-use QuantaQuirk\Support\Facades\Route;
-use QuantaQuirk\QuantaQuirkIgnition\ContextProviders\QuantaQuirkRequestContextProvider;
+use QuantaForge\Foundation\Auth\User;
+use QuantaForge\Support\Facades\Route;
+use QuantaForge\QuantaForgeIgnition\ContextProviders\QuantaForgeRequestContextProvider;
 
 it('returns route name in context data', function () {
     $route = Route::get('/route/', fn () => null)->name('routeName');
@@ -13,7 +13,7 @@ it('returns route name in context data', function () {
 
     $request->setRouteResolver(fn () => $route);
 
-    $context = new QuantaQuirkRequestContextProvider($request);
+    $context = new QuantaForgeRequestContextProvider($request);
 
     $contextData = $context->toArray();
 
@@ -31,7 +31,7 @@ it('returns route parameters in context data', function () {
         return $route;
     });
 
-    $context = new QuantaQuirkRequestContextProvider($request);
+    $context = new QuantaForgeRequestContextProvider($request);
 
     $contextData = $context->toArray();
 
@@ -60,7 +60,7 @@ it('will call the to flare method on route parameters when it exists', function 
         return $route;
     });
 
-    $context = new QuantaQuirkRequestContextProvider($request);
+    $context = new QuantaForgeRequestContextProvider($request);
 
     $contextData = $context->toArray();
 
@@ -72,7 +72,7 @@ it('will call the to flare method on route parameters when it exists', function 
 it('returns the url', function () {
     $request = test()->createRequest('GET', '/route', []);
 
-    $context = new QuantaQuirkRequestContextProvider($request);
+    $context = new QuantaForgeRequestContextProvider($request);
 
     $request = $context->getRequest();
 
@@ -82,7 +82,7 @@ it('returns the url', function () {
 it('returns the cookies', function () {
     $request = test()->createRequest('GET', '/route', [], ['cookie' => 'noms']);
 
-    $context = new QuantaQuirkRequestContextProvider($request);
+    $context = new QuantaForgeRequestContextProvider($request);
 
     expect($context->getCookies())->toBe(['cookie' => 'noms']);
 });
@@ -97,7 +97,7 @@ it('returns the authenticated user', function () {
     $request = test()->createRequest('GET', '/route', [], ['cookie' => 'noms']);
     $request->setUserResolver(fn () => $user);
 
-    $context = new QuantaQuirkRequestContextProvider($request);
+    $context = new QuantaForgeRequestContextProvider($request);
     $contextData = $context->toArray();
 
     expect($contextData['user'])->toBe($user->toArray());
@@ -119,7 +119,7 @@ it('the authenticated user model has a to flare method it will be used to collec
     $request = test()->createRequest('GET', '/route', [], ['cookie' => 'noms']);
     $request->setUserResolver(fn () => $user);
 
-    $context = new QuantaQuirkRequestContextProvider($request);
+    $context = new QuantaForgeRequestContextProvider($request);
     $contextData = $context->toArray();
 
     expect($contextData['user'])->toBe(['id' => $user->id]);
@@ -136,7 +136,7 @@ it('the authenticated user model has no matching method it will return no user d
     $request = test()->createRequest('GET', '/route', [], ['cookie' => 'noms']);
     $request->setUserResolver(fn () => $user);
 
-    $context = new QuantaQuirkRequestContextProvider($request);
+    $context = new QuantaForgeRequestContextProvider($request);
     $contextData = $context->toArray();
 
     expect($contextData['user'])->toBe(['name' => 'John Doe']);
@@ -150,7 +150,7 @@ it('the authenticated user model is broken it will return no user data', functio
     $request = test()->createRequest('GET', '/route', [], ['cookie' => 'noms']);
     $request->setUserResolver(fn () => $user);
 
-    $context = new QuantaQuirkRequestContextProvider($request);
+    $context = new QuantaForgeRequestContextProvider($request);
     $contextData = $context->toArray();
 
     expect($contextData)->not()->toHaveKey('user');

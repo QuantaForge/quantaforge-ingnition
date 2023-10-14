@@ -1,9 +1,9 @@
 <?php
 
-namespace QuantaQuirk\QuantaQuirkIgnition\Solutions\SolutionProviders;
+namespace QuantaForge\QuantaForgeIgnition\Solutions\SolutionProviders;
 
-use QuantaQuirk\Ignition\Contracts\BaseSolution;
-use QuantaQuirk\Ignition\Contracts\HasSolutionsForThrowable;
+use QuantaForge\Ignition\Contracts\BaseSolution;
+use QuantaForge\Ignition\Contracts\HasSolutionsForThrowable;
 use Throwable;
 
 class SailNetworkSolutionProvider implements HasSolutionsForThrowable
@@ -23,7 +23,7 @@ class SailNetworkSolutionProvider implements HasSolutionsForThrowable
             BaseSolution::create('Network address not found')
                 ->setSolutionDescription('Did you mean to use `sail artisan`?')
                 ->setDocumentationLinks([
-                    'Sail: Executing Artisan Commands' => 'https://quantaquirk.com/docs/sail#executing-artisan-commands',
+                    'Sail: Executing Artisan Commands' => 'https://quantaforge.com/docs/sail#executing-artisan-commands',
                 ]),
         ];
     }

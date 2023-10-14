@@ -1,7 +1,7 @@
 <?php
 
-use QuantaQuirk\Ignition\Config\IgnitionConfig;
-use QuantaQuirk\Ignition\Contracts\ConfigManager;
+use QuantaForge\Ignition\Config\IgnitionConfig;
+use QuantaForge\Ignition\Contracts\ConfigManager;
 
 afterEach(function () {
     Mockery::close();

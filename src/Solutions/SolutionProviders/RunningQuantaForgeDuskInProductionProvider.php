@@ -1,13 +1,13 @@
 <?php
 
-namespace QuantaQuirk\QuantaQuirkIgnition\Solutions\SolutionProviders;
+namespace QuantaForge\QuantaForgeIgnition\Solutions\SolutionProviders;
 
 use Exception;
-use QuantaQuirk\Ignition\Contracts\BaseSolution;
-use QuantaQuirk\Ignition\Contracts\HasSolutionsForThrowable;
+use QuantaForge\Ignition\Contracts\BaseSolution;
+use QuantaForge\Ignition\Contracts\HasSolutionsForThrowable;
 use Throwable;
 
-class RunningQuantaQuirkDuskInProductionProvider implements HasSolutionsForThrowable
+class RunningQuantaForgeDuskInProductionProvider implements HasSolutionsForThrowable
 {
     public function canSolve(Throwable $throwable): bool
     {
@@ -22,11 +22,11 @@ class RunningQuantaQuirkDuskInProductionProvider implements HasSolutionsForThrow
     {
         return [
             BaseSolution::create()
-                ->setSolutionTitle('QuantaQuirk Dusk should not be run in production.')
+                ->setSolutionTitle('QuantaForge Dusk should not be run in production.')
                 ->setSolutionDescription('Install the dependencies with the `--no-dev` flag.'),
 
             BaseSolution::create()
-                ->setSolutionTitle('QuantaQuirk Dusk can be run in other environments.')
+                ->setSolutionTitle('QuantaForge Dusk can be run in other environments.')
                 ->setSolutionDescription('Consider setting the `APP_ENV` to something other than `production` like `local` for example.'),
         ];
     }

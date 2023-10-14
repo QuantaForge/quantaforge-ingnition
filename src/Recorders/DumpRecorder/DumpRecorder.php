@@ -1,9 +1,9 @@
 <?php
 
-namespace QuantaQuirk\QuantaQuirkIgnition\Recorders\DumpRecorder;
+namespace QuantaForge\QuantaForgeIgnition\Recorders\DumpRecorder;
 
-use QuantaQuirk\Contracts\Foundation\Application;
-use QuantaQuirk\Support\Arr;
+use QuantaForge\Contracts\Foundation\Application;
+use QuantaForge\Support\Arr;
 use ReflectionMethod;
 use ReflectionProperty;
 use Symfony\Component\VarDumper\Cloner\Data;

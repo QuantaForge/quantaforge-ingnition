@@ -1,8 +1,8 @@
 <?php
 
-namespace QuantaQuirk\QuantaQuirkIgnition\Views;
+namespace QuantaForge\QuantaForgeIgnition\Views;
 
-use QuantaQuirk\View\Compilers\BladeCompiler;
+use QuantaForge\View\Compilers\BladeCompiler;
 use Throwable;
 
 class BladeSourceMapCompiler

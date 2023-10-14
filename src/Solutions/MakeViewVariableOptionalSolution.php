@@ -1,10 +1,10 @@
 <?php
 
-namespace QuantaQuirk\QuantaQuirkIgnition\Solutions;
+namespace QuantaForge\QuantaForgeIgnition\Solutions;
 
-use QuantaQuirk\Support\Facades\Blade;
-use QuantaQuirk\Support\Str;
-use QuantaQuirk\Ignition\Contracts\RunnableSolution;
+use QuantaForge\Support\Facades\Blade;
+use QuantaForge\Support\Str;
+use QuantaForge\Ignition\Contracts\RunnableSolution;
 
 class MakeViewVariableOptionalSolution implements RunnableSolution
 {

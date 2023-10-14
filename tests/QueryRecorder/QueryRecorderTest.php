@@ -1,8 +1,8 @@
 <?php
 
-use QuantaQuirk\Database\Connection;
-use QuantaQuirk\Database\Events\QueryExecuted;
-use QuantaQuirk\QuantaQuirkIgnition\Recorders\QueryRecorder\QueryRecorder;
+use QuantaForge\Database\Connection;
+use QuantaForge\Database\Events\QueryExecuted;
+use QuantaForge\QuantaForgeIgnition\Recorders\QueryRecorder\QueryRecorder;
 
 it('limits the amount of recorded queries', function () {
     $recorder = new QueryRecorder(app(), true, 200);

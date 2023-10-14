@@ -1,13 +1,13 @@
 <?php
 
 use Carbon\CarbonImmutable;
-use QuantaQuirk\Container\Container;
-use QuantaQuirk\Queue\Events\JobExceptionOccurred;
-use QuantaQuirk\Queue\Jobs\RedisJob;
-use QuantaQuirk\Queue\RedisQueue;
-use QuantaQuirk\Support\Facades\Event;
-use QuantaQuirk\QuantaQuirkIgnition\Recorders\JobRecorder\JobRecorder;
-use QuantaQuirk\QuantaQuirkIgnition\Tests\stubs\Jobs\QueueableJob;
+use QuantaForge\Container\Container;
+use QuantaForge\Queue\Events\JobExceptionOccurred;
+use QuantaForge\Queue\Jobs\RedisJob;
+use QuantaForge\Queue\RedisQueue;
+use QuantaForge\Support\Facades\Event;
+use QuantaForge\QuantaForgeIgnition\Recorders\JobRecorder\JobRecorder;
+use QuantaForge\QuantaForgeIgnition\Tests\stubs\Jobs\QueueableJob;
 
 it('can record a failed job', function () {
     $recorder = (new JobRecorder(app()));
@@ -18,7 +18,7 @@ it('can record a failed job', function () {
 
     $recorded = $recorder->getJob();
 
-    expect($recorded['name'])->toEqual('QuantaQuirk\QuantaQuirkIgnition\Tests\stubs\Jobs\QueueableJob');
+    expect($recorded['name'])->toEqual('QuantaForge\QuantaForgeIgnition\Tests\stubs\Jobs\QueueableJob');
     expect($recorded['connection'])->toEqual('sync');
     expect($recorded['queue'])->toEqual('sync');
     $this->assertNotEmpty($recorded['uuid']);

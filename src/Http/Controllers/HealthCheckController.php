@@ -1,9 +1,9 @@
 <?php
 
-namespace QuantaQuirk\QuantaQuirkIgnition\Http\Controllers;
+namespace QuantaForge\QuantaForgeIgnition\Http\Controllers;
 
-use QuantaQuirk\Support\Facades\Artisan;
-use QuantaQuirk\Support\Str;
+use QuantaForge\Support\Facades\Artisan;
+use QuantaForge\Support\Str;
 
 class HealthCheckController
 {

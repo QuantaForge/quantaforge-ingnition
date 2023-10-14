@@ -1,11 +1,11 @@
 <?php
 
-namespace QuantaQuirk\QuantaQuirkIgnition\Http\Requests;
+namespace QuantaForge\QuantaForgeIgnition\Http\Requests;
 
-use QuantaQuirk\Foundation\Http\FormRequest;
-use QuantaQuirk\Ignition\Contracts\RunnableSolution;
-use QuantaQuirk\Ignition\Contracts\Solution;
-use QuantaQuirk\Ignition\Contracts\SolutionProviderRepository;
+use QuantaForge\Foundation\Http\FormRequest;
+use QuantaForge\Ignition\Contracts\RunnableSolution;
+use QuantaForge\Ignition\Contracts\Solution;
+use QuantaForge\Ignition\Contracts\SolutionProviderRepository;
 
 class ExecuteSolutionRequest extends FormRequest
 {

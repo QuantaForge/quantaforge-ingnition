@@ -1,13 +1,13 @@
 <?php
 
-namespace QuantaQuirk\QuantaQuirkIgnition\Solutions\SolutionTransformers;
+namespace QuantaForge\QuantaForgeIgnition\Solutions\SolutionTransformers;
 
-use QuantaQuirk\Ignition\Contracts\RunnableSolution;
-use QuantaQuirk\Ignition\Solutions\SolutionTransformer;
-use QuantaQuirk\QuantaQuirkIgnition\Http\Controllers\ExecuteSolutionController;
+use QuantaForge\Ignition\Contracts\RunnableSolution;
+use QuantaForge\Ignition\Solutions\SolutionTransformer;
+use QuantaForge\QuantaForgeIgnition\Http\Controllers\ExecuteSolutionController;
 use Throwable;
 
-class QuantaQuirkSolutionTransformer extends SolutionTransformer
+class QuantaForgeSolutionTransformer extends SolutionTransformer
 {
     /** @return array<string|mixed> */
     public function toArray(): array
@@ -48,7 +48,7 @@ class QuantaQuirkSolutionTransformer extends SolutionTransformer
     protected function executeEndpoint(): ?string
     {
         try {
-            // The action class needs to be prefixed with a `\` to QuantaQuirk from trying
+            // The action class needs to be prefixed with a `\` to QuantaForge from trying
             // to add its own global namespace from RouteServiceProvider::$namespace.
 
             return action('\\'.ExecuteSolutionController::class);

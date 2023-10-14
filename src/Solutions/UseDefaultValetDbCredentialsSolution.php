@@ -1,9 +1,9 @@
 <?php
 
-namespace QuantaQuirk\QuantaQuirkIgnition\Solutions;
+namespace QuantaForge\QuantaForgeIgnition\Solutions;
 
-use QuantaQuirk\Support\Str;
-use QuantaQuirk\Ignition\Contracts\RunnableSolution;
+use QuantaForge\Support\Str;
+use QuantaForge\Ignition\Contracts\RunnableSolution;
 
 class UseDefaultValetDbCredentialsSolution implements RunnableSolution
 {
@@ -51,7 +51,7 @@ class UseDefaultValetDbCredentialsSolution implements RunnableSolution
     public function getDocumentationLinks(): array
     {
         return [
-            'Valet documentation' => 'https://quantaquirk.com/docs/master/valet',
+            'Valet documentation' => 'https://quantaforge.com/docs/master/valet',
         ];
     }
 

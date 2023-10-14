@@ -1,17 +1,17 @@
 <?php
 
-namespace QuantaQuirk\QuantaQuirkIgnition\Recorders\JobRecorder;
+namespace QuantaForge\QuantaForgeIgnition\Recorders\JobRecorder;
 
 use DateTime;
 use Error;
 use Exception;
-use QuantaQuirk\Contracts\Encryption\Encrypter;
-use QuantaQuirk\Contracts\Foundation\Application;
-use QuantaQuirk\Contracts\Queue\Job;
-use QuantaQuirk\Queue\CallQueuedClosure;
-use QuantaQuirk\Queue\Events\JobExceptionOccurred;
-use QuantaQuirk\Queue\Jobs\RedisJob;
-use QuantaQuirk\Support\Str;
+use QuantaForge\Contracts\Encryption\Encrypter;
+use QuantaForge\Contracts\Foundation\Application;
+use QuantaForge\Contracts\Queue\Job;
+use QuantaForge\Queue\CallQueuedClosure;
+use QuantaForge\Queue\Events\JobExceptionOccurred;
+use QuantaForge\Queue\Jobs\RedisJob;
+use QuantaForge\Support\Str;
 use ReflectionClass;
 use ReflectionProperty;
 use RuntimeException;
@@ -153,7 +153,7 @@ class JobRecorder
         );
     }
 
-    // Taken from QuantaQuirk\Queue\CallQueuedHandler
+    // Taken from QuantaForge\Queue\CallQueuedHandler
     protected function resolveObjectFromCommand(string $command): object
     {
         if (Str::startsWith($command, 'O:')) {

@@ -1,11 +1,11 @@
 <?php
 
-namespace QuantaQuirk\QuantaQuirkIgnition\FlareMiddleware;
+namespace QuantaForge\QuantaForgeIgnition\FlareMiddleware;
 
-use QuantaQuirk\Database\QueryException;
-use QuantaQuirk\FlareClient\Contracts\ProvidesFlareContext;
-use QuantaQuirk\FlareClient\FlareMiddleware\FlareMiddleware;
-use QuantaQuirk\FlareClient\Report;
+use QuantaForge\Database\QueryException;
+use QuantaForge\FlareClient\Contracts\ProvidesFlareContext;
+use QuantaForge\FlareClient\FlareMiddleware\FlareMiddleware;
+use QuantaForge\FlareClient\Report;
 
 class AddExceptionInformation implements FlareMiddleware
 {

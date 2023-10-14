@@ -1,29 +1,29 @@
 <?php
 
-use QuantaQuirk\Ignition\Solutions\SolutionProviders\BadMethodCallSolutionProvider;
-use QuantaQuirk\Ignition\Solutions\SolutionProviders\MergeConflictSolutionProvider;
-use QuantaQuirk\Ignition\Solutions\SolutionProviders\UndefinedPropertySolutionProvider;
-use QuantaQuirk\QuantaQuirkIgnition\Recorders\DumpRecorder\DumpRecorder;
-use QuantaQuirk\QuantaQuirkIgnition\Recorders\JobRecorder\JobRecorder;
-use QuantaQuirk\QuantaQuirkIgnition\Recorders\LogRecorder\LogRecorder;
-use QuantaQuirk\QuantaQuirkIgnition\Recorders\QueryRecorder\QueryRecorder;
-use QuantaQuirk\QuantaQuirkIgnition\Solutions\SolutionProviders\DefaultDbNameSolutionProvider;
-use QuantaQuirk\QuantaQuirkIgnition\Solutions\SolutionProviders\GenericQuantaQuirkExceptionSolutionProvider;
-use QuantaQuirk\QuantaQuirkIgnition\Solutions\SolutionProviders\IncorrectValetDbCredentialsSolutionProvider;
-use QuantaQuirk\QuantaQuirkIgnition\Solutions\SolutionProviders\InvalidRouteActionSolutionProvider;
-use QuantaQuirk\QuantaQuirkIgnition\Solutions\SolutionProviders\MissingAppKeySolutionProvider;
-use QuantaQuirk\QuantaQuirkIgnition\Solutions\SolutionProviders\MissingColumnSolutionProvider;
-use QuantaQuirk\QuantaQuirkIgnition\Solutions\SolutionProviders\MissingImportSolutionProvider;
-use QuantaQuirk\QuantaQuirkIgnition\Solutions\SolutionProviders\MissingLivewireComponentSolutionProvider;
-use QuantaQuirk\QuantaQuirkIgnition\Solutions\SolutionProviders\MissingMixManifestSolutionProvider;
-use QuantaQuirk\QuantaQuirkIgnition\Solutions\SolutionProviders\MissingViteManifestSolutionProvider;
-use QuantaQuirk\QuantaQuirkIgnition\Solutions\SolutionProviders\RunningQuantaQuirkDuskInProductionProvider;
-use QuantaQuirk\QuantaQuirkIgnition\Solutions\SolutionProviders\TableNotFoundSolutionProvider;
-use QuantaQuirk\QuantaQuirkIgnition\Solutions\SolutionProviders\UndefinedViewVariableSolutionProvider;
-use QuantaQuirk\QuantaQuirkIgnition\Solutions\SolutionProviders\UnknownValidationSolutionProvider;
-use QuantaQuirk\QuantaQuirkIgnition\Solutions\SolutionProviders\ViewNotFoundSolutionProvider;
-use QuantaQuirk\QuantaQuirkIgnition\Solutions\SolutionProviders\OpenAiSolutionProvider;
-use QuantaQuirk\QuantaQuirkIgnition\Solutions\SolutionProviders\SailNetworkSolutionProvider;
+use QuantaForge\Ignition\Solutions\SolutionProviders\BadMethodCallSolutionProvider;
+use QuantaForge\Ignition\Solutions\SolutionProviders\MergeConflictSolutionProvider;
+use QuantaForge\Ignition\Solutions\SolutionProviders\UndefinedPropertySolutionProvider;
+use QuantaForge\QuantaForgeIgnition\Recorders\DumpRecorder\DumpRecorder;
+use QuantaForge\QuantaForgeIgnition\Recorders\JobRecorder\JobRecorder;
+use QuantaForge\QuantaForgeIgnition\Recorders\LogRecorder\LogRecorder;
+use QuantaForge\QuantaForgeIgnition\Recorders\QueryRecorder\QueryRecorder;
+use QuantaForge\QuantaForgeIgnition\Solutions\SolutionProviders\DefaultDbNameSolutionProvider;
+use QuantaForge\QuantaForgeIgnition\Solutions\SolutionProviders\GenericQuantaForgeExceptionSolutionProvider;
+use QuantaForge\QuantaForgeIgnition\Solutions\SolutionProviders\IncorrectValetDbCredentialsSolutionProvider;
+use QuantaForge\QuantaForgeIgnition\Solutions\SolutionProviders\InvalidRouteActionSolutionProvider;
+use QuantaForge\QuantaForgeIgnition\Solutions\SolutionProviders\MissingAppKeySolutionProvider;
+use QuantaForge\QuantaForgeIgnition\Solutions\SolutionProviders\MissingColumnSolutionProvider;
+use QuantaForge\QuantaForgeIgnition\Solutions\SolutionProviders\MissingImportSolutionProvider;
+use QuantaForge\QuantaForgeIgnition\Solutions\SolutionProviders\MissingLivewireComponentSolutionProvider;
+use QuantaForge\QuantaForgeIgnition\Solutions\SolutionProviders\MissingMixManifestSolutionProvider;
+use QuantaForge\QuantaForgeIgnition\Solutions\SolutionProviders\MissingViteManifestSolutionProvider;
+use QuantaForge\QuantaForgeIgnition\Solutions\SolutionProviders\RunningQuantaForgeDuskInProductionProvider;
+use QuantaForge\QuantaForgeIgnition\Solutions\SolutionProviders\TableNotFoundSolutionProvider;
+use QuantaForge\QuantaForgeIgnition\Solutions\SolutionProviders\UndefinedViewVariableSolutionProvider;
+use QuantaForge\QuantaForgeIgnition\Solutions\SolutionProviders\UnknownValidationSolutionProvider;
+use QuantaForge\QuantaForgeIgnition\Solutions\SolutionProviders\ViewNotFoundSolutionProvider;
+use QuantaForge\QuantaForgeIgnition\Solutions\SolutionProviders\OpenAiSolutionProvider;
+use QuantaForge\QuantaForgeIgnition\Solutions\SolutionProviders\SailNetworkSolutionProvider;
 
 return [
 
@@ -75,7 +75,7 @@ return [
     |--------------------------------------------------------------------------
     |
     | Ignition comes with an additional make command that lets you create
-    | new solution classes more easily. To keep your default QuantaQuirk
+    | new solution classes more easily. To keep your default QuantaForge
     | installation clean, this command is not registered by default.
     |
     | You can enable the command registration below.
@@ -96,12 +96,12 @@ return [
     */
 
     'solution_providers' => [
-        // from quantaquirk/ignition
+        // from quantaforge/ignition
         BadMethodCallSolutionProvider::class,
         MergeConflictSolutionProvider::class,
         UndefinedPropertySolutionProvider::class,
 
-        // from quantaquirk/quantaquirk-ignition
+        // from quantaforge/quantaforge-ignition
         IncorrectValetDbCredentialsSolutionProvider::class,
         MissingAppKeySolutionProvider::class,
         DefaultDbNameSolutionProvider::class,
@@ -109,14 +109,14 @@ return [
         MissingImportSolutionProvider::class,
         InvalidRouteActionSolutionProvider::class,
         ViewNotFoundSolutionProvider::class,
-        RunningQuantaQuirkDuskInProductionProvider::class,
+        RunningQuantaForgeDuskInProductionProvider::class,
         MissingColumnSolutionProvider::class,
         UnknownValidationSolutionProvider::class,
         MissingMixManifestSolutionProvider::class,
         MissingViteManifestSolutionProvider::class,
         MissingLivewireComponentSolutionProvider::class,
         UndefinedViewVariableSolutionProvider::class,
-        GenericQuantaQuirkExceptionSolutionProvider::class,
+        GenericQuantaForgeExceptionSolutionProvider::class,
         OpenAiSolutionProvider::class,
         SailNetworkSolutionProvider::class,
     ],
@@ -161,7 +161,7 @@ return [
     | Remote Path Mapping
     |--------------------------------------------------------------------------
     |
-    | If you are using a remote dev server, like QuantaQuirk Homestead, Docker, or
+    | If you are using a remote dev server, like QuantaForge Homestead, Docker, or
     | even a remote VPS, it will be necessary to specify your path mapping.
     |
     | Leaving one, or both of these, empty or null will not trigger the remote
@@ -266,17 +266,17 @@ return [
     */
 
     'argument_reducers' => [
-        \QuantaQuirk\Backtrace\Arguments\Reducers\BaseTypeArgumentReducer::class,
-        \QuantaQuirk\Backtrace\Arguments\Reducers\ArrayArgumentReducer::class,
-        \QuantaQuirk\Backtrace\Arguments\Reducers\StdClassArgumentReducer::class,
-        \QuantaQuirk\Backtrace\Arguments\Reducers\EnumArgumentReducer::class,
-        \QuantaQuirk\Backtrace\Arguments\Reducers\ClosureArgumentReducer::class,
-        \QuantaQuirk\Backtrace\Arguments\Reducers\DateTimeArgumentReducer::class,
-        \QuantaQuirk\Backtrace\Arguments\Reducers\DateTimeZoneArgumentReducer::class,
-        \QuantaQuirk\Backtrace\Arguments\Reducers\SymphonyRequestArgumentReducer::class,
-        \QuantaQuirk\QuantaQuirkIgnition\ArgumentReducers\ModelArgumentReducer::class,
-        \QuantaQuirk\QuantaQuirkIgnition\ArgumentReducers\CollectionArgumentReducer::class,
-        \QuantaQuirk\Backtrace\Arguments\Reducers\StringableArgumentReducer::class,
+        \QuantaForge\Backtrace\Arguments\Reducers\BaseTypeArgumentReducer::class,
+        \QuantaForge\Backtrace\Arguments\Reducers\ArrayArgumentReducer::class,
+        \QuantaForge\Backtrace\Arguments\Reducers\StdClassArgumentReducer::class,
+        \QuantaForge\Backtrace\Arguments\Reducers\EnumArgumentReducer::class,
+        \QuantaForge\Backtrace\Arguments\Reducers\ClosureArgumentReducer::class,
+        \QuantaForge\Backtrace\Arguments\Reducers\DateTimeArgumentReducer::class,
+        \QuantaForge\Backtrace\Arguments\Reducers\DateTimeZoneArgumentReducer::class,
+        \QuantaForge\Backtrace\Arguments\Reducers\SymphonyRequestArgumentReducer::class,
+        \QuantaForge\QuantaForgeIgnition\ArgumentReducers\ModelArgumentReducer::class,
+        \QuantaForge\QuantaForgeIgnition\ArgumentReducers\CollectionArgumentReducer::class,
+        \QuantaForge\Backtrace\Arguments\Reducers\StringableArgumentReducer::class,
     ],
 
 ];

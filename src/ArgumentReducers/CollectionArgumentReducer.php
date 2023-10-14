@@ -1,11 +1,11 @@
 <?php
 
-namespace QuantaQuirk\QuantaQuirkIgnition\ArgumentReducers;
+namespace QuantaForge\QuantaForgeIgnition\ArgumentReducers;
 
-use QuantaQuirk\Support\Collection;
-use QuantaQuirk\Backtrace\Arguments\ReducedArgument\ReducedArgumentContract;
-use QuantaQuirk\Backtrace\Arguments\ReducedArgument\UnReducedArgument;
-use QuantaQuirk\Backtrace\Arguments\Reducers\ArrayArgumentReducer;
+use QuantaForge\Support\Collection;
+use QuantaForge\Backtrace\Arguments\ReducedArgument\ReducedArgumentContract;
+use QuantaForge\Backtrace\Arguments\ReducedArgument\UnReducedArgument;
+use QuantaForge\Backtrace\Arguments\Reducers\ArrayArgumentReducer;
 
 class CollectionArgumentReducer extends ArrayArgumentReducer
 {

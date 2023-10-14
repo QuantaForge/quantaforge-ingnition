@@ -1,8 +1,8 @@
 <?php
 
-namespace QuantaQuirk\QuantaQuirkIgnition\Commands;
+namespace QuantaForge\QuantaForgeIgnition\Commands;
 
-use QuantaQuirk\Console\GeneratorCommand;
+use QuantaForge\Console\GeneratorCommand;
 
 class SolutionProviderMakeCommand extends GeneratorCommand
 {

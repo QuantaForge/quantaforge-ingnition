@@ -1,6 +1,6 @@
 <?php
 
-use QuantaQuirk\Ignition\Solutions\SolutionProviders\UndefinedPropertySolutionProvider;
+use QuantaForge\Ignition\Solutions\SolutionProviders\UndefinedPropertySolutionProvider;
 
 it('can solve an undefined property exception when there is a similar property', function () {
     $canSolve = app(UndefinedPropertySolutionProvider::class)->canSolve(getUndefinedPropertyException());
@@ -15,14 +15,14 @@ it('cannot solve an undefined property exception when there is no similar proper
 });
 
 it('can recommend a property name when there is a similar property', function () {
-    /** @var \QuantaQuirk\Ignition\Contracts\Solution $solution */
+    /** @var \QuantaForge\Ignition\Contracts\Solution $solution */
     $solution = app(UndefinedPropertySolutionProvider::class)->getSolutions(getUndefinedPropertyException())[0];
 
-    expect($solution->getSolutionDescription())->toEqual('Did you mean QuantaQuirk\QuantaQuirkIgnition\Tests\Support\Models\Car::$color ?');
+    expect($solution->getSolutionDescription())->toEqual('Did you mean QuantaForge\QuantaForgeIgnition\Tests\Support\Models\Car::$color ?');
 });
 
 it('cannot recommend a property name when there is no similar property', function () {
-    /** @var \QuantaQuirk\Ignition\Contracts\Solution $solution */
+    /** @var \QuantaForge\Ignition\Contracts\Solution $solution */
     $solution = app(UndefinedPropertySolutionProvider::class)->getSolutions(getUndefinedPropertyException('balance'))[0];
 
     expect($solution->getSolutionDescription())->toEqual('');
@@ -31,5 +31,5 @@ it('cannot recommend a property name when there is no similar property', functio
 // Helpers
 function getUndefinedPropertyException(string $property = 'colro'): ErrorException
 {
-    return new ErrorException("Undefined property: QuantaQuirk\QuantaQuirkIgnition\Tests\Support\Models\Car::$$property ");
+    return new ErrorException("Undefined property: QuantaForge\QuantaForgeIgnition\Tests\Support\Models\Car::$$property ");
 }

@@ -1,8 +1,8 @@
 <?php
 
-namespace QuantaQuirk\QuantaQuirkIgnition\Solutions;
+namespace QuantaForge\QuantaForgeIgnition\Solutions;
 
-use QuantaQuirk\Ignition\Contracts\Solution;
+use QuantaForge\Ignition\Contracts\Solution;
 
 class SuggestUsingCorrectDbNameSolution implements Solution
 {
@@ -22,7 +22,7 @@ class SuggestUsingCorrectDbNameSolution implements Solution
     public function getDocumentationLinks(): array
     {
         return [
-            'Database: Getting Started docs' => 'https://quantaquirk.com/docs/master/database#configuration',
+            'Database: Getting Started docs' => 'https://quantaforge.com/docs/master/database#configuration',
         ];
     }
 }

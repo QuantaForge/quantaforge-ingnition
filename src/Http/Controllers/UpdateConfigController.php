@@ -1,9 +1,9 @@
 <?php
 
-namespace QuantaQuirk\QuantaQuirkIgnition\Http\Controllers;
+namespace QuantaForge\QuantaForgeIgnition\Http\Controllers;
 
-use QuantaQuirk\Ignition\Config\IgnitionConfig;
-use QuantaQuirk\QuantaQuirkIgnition\Http\Requests\UpdateConfigRequest;
+use QuantaForge\Ignition\Config\IgnitionConfig;
+use QuantaForge\QuantaForgeIgnition\Http\Requests\UpdateConfigRequest;
 
 class UpdateConfigController
 {

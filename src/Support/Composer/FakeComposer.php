@@ -1,6 +1,6 @@
 <?php
 
-namespace QuantaQuirk\QuantaQuirkIgnition\Support\Composer;
+namespace QuantaForge\QuantaForgeIgnition\Support\Composer;
 
 class FakeComposer implements Composer
 {

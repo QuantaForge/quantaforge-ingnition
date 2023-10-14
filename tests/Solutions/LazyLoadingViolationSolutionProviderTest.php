@@ -1,8 +1,8 @@
 <?php
 
-use QuantaQuirk\Database\LazyLoadingViolationException;
-use QuantaQuirk\Foundation\Auth\User;
-use QuantaQuirk\QuantaQuirkIgnition\Solutions\SolutionProviders\LazyLoadingViolationSolutionProvider;
+use QuantaForge\Database\LazyLoadingViolationException;
+use QuantaForge\Foundation\Auth\User;
+use QuantaForge\QuantaForgeIgnition\Solutions\SolutionProviders\LazyLoadingViolationSolutionProvider;
 
 it('can solve lazy loading violations', function () {
     $canSolve = app(LazyLoadingViolationSolutionProvider::class)

@@ -1,9 +1,9 @@
 <?php
 
-namespace QuantaQuirk\QuantaQuirkIgnition\Support;
+namespace QuantaForge\QuantaForgeIgnition\Support;
 
-use QuantaQuirk\Support\Collection;
-use QuantaQuirk\Support\Str;
+use QuantaForge\Support\Collection;
+use QuantaForge\Support\Str;
 use Livewire\LivewireManager;
 use ReflectionClass;
 use ReflectionMethod;

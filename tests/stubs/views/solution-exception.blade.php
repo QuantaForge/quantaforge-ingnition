@@ -1,6 +1,6 @@
 <h1>This is a blade view with a solution</h1>
 @php
-use QuantaQuirk\QuantaQuirkIgnition\Tests\TestClasses\ExceptionWithSolution;
+use QuantaForge\QuantaForgeIgnition\Tests\TestClasses\ExceptionWithSolution;
 
 $exception ??= new ExceptionWithSolution;
 

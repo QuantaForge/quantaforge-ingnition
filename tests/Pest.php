@@ -1,7 +1,7 @@
 <?php
 
 use Dotenv\Dotenv;
-use QuantaQuirk\QuantaQuirkIgnition\Tests\TestCase;
+use QuantaForge\QuantaForgeIgnition\Tests\TestCase;
 
 uses(TestCase::class)->in(__DIR__);
 

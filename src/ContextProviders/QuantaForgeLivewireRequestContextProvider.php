@@ -1,13 +1,13 @@
 <?php
 
-namespace QuantaQuirk\QuantaQuirkIgnition\ContextProviders;
+namespace QuantaForge\QuantaForgeIgnition\ContextProviders;
 
 use Exception;
-use QuantaQuirk\Http\Request;
-use QuantaQuirk\Support\Arr;
+use QuantaForge\Http\Request;
+use QuantaForge\Support\Arr;
 use Livewire\LivewireManager;
 
-class QuantaQuirkLivewireRequestContextProvider extends QuantaQuirkRequestContextProvider
+class QuantaForgeLivewireRequestContextProvider extends QuantaForgeRequestContextProvider
 {
     public function __construct(
         Request $request,

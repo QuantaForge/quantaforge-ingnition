@@ -1,10 +1,10 @@
 <?php
 
-namespace QuantaQuirk\QuantaQuirkIgnition\Solutions\SolutionProviders;
+namespace QuantaForge\QuantaForgeIgnition\Solutions\SolutionProviders;
 
-use QuantaQuirk\Database\QueryException;
-use QuantaQuirk\Ignition\Contracts\HasSolutionsForThrowable;
-use QuantaQuirk\QuantaQuirkIgnition\Solutions\UseDefaultValetDbCredentialsSolution;
+use QuantaForge\Database\QueryException;
+use QuantaForge\Ignition\Contracts\HasSolutionsForThrowable;
+use QuantaForge\QuantaForgeIgnition\Solutions\UseDefaultValetDbCredentialsSolution;
 use Throwable;
 
 class IncorrectValetDbCredentialsSolutionProvider implements HasSolutionsForThrowable

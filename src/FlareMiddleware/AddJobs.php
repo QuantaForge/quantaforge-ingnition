@@ -1,10 +1,10 @@
 <?php
 
-namespace QuantaQuirk\QuantaQuirkIgnition\FlareMiddleware;
+namespace QuantaForge\QuantaForgeIgnition\FlareMiddleware;
 
-use QuantaQuirk\FlareClient\FlareMiddleware\FlareMiddleware;
-use QuantaQuirk\FlareClient\Report;
-use QuantaQuirk\QuantaQuirkIgnition\Recorders\JobRecorder\JobRecorder;
+use QuantaForge\FlareClient\FlareMiddleware\FlareMiddleware;
+use QuantaForge\FlareClient\Report;
+use QuantaForge\QuantaForgeIgnition\Recorders\JobRecorder\JobRecorder;
 
 class AddJobs implements FlareMiddleware
 {

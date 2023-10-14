@@ -1,43 +1,43 @@
 <?php
 
-namespace QuantaQuirk\QuantaQuirkIgnition;
+namespace QuantaForge\QuantaForgeIgnition;
 
 use Exception;
-use QuantaQuirk\Contracts\Debug\ExceptionHandler;
-use QuantaQuirk\Foundation\Application;
-use QuantaQuirk\Support\Facades\Log;
-use QuantaQuirk\Support\ServiceProvider;
-use QuantaQuirk\View\ViewException;
-use QuantaQuirk\Octane\Events\RequestReceived;
-use QuantaQuirk\Octane\Events\RequestTerminated;
-use QuantaQuirk\Octane\Events\TaskReceived;
-use QuantaQuirk\Octane\Events\TickReceived;
+use QuantaForge\Contracts\Debug\ExceptionHandler;
+use QuantaForge\Foundation\Application;
+use QuantaForge\Support\Facades\Log;
+use QuantaForge\Support\ServiceProvider;
+use QuantaForge\View\ViewException;
+use QuantaForge\Octane\Events\RequestReceived;
+use QuantaForge\Octane\Events\RequestTerminated;
+use QuantaForge\Octane\Events\TaskReceived;
+use QuantaForge\Octane\Events\TickReceived;
 use Monolog\Level;
 use Monolog\Logger;
-use QuantaQuirk\FlareClient\Flare;
-use QuantaQuirk\FlareClient\FlareMiddleware\AddSolutions;
-use QuantaQuirk\Ignition\Config\FileConfigManager;
-use QuantaQuirk\Ignition\Config\IgnitionConfig;
-use QuantaQuirk\Ignition\Contracts\ConfigManager;
-use QuantaQuirk\Ignition\Contracts\SolutionProviderRepository as SolutionProviderRepositoryContract;
-use QuantaQuirk\Ignition\Ignition;
-use QuantaQuirk\QuantaQuirkIgnition\Commands\SolutionMakeCommand;
-use QuantaQuirk\QuantaQuirkIgnition\Commands\SolutionProviderMakeCommand;
-use QuantaQuirk\QuantaQuirkIgnition\Commands\TestCommand;
-use QuantaQuirk\QuantaQuirkIgnition\ContextProviders\QuantaQuirkContextProviderDetector;
-use QuantaQuirk\QuantaQuirkIgnition\Exceptions\InvalidConfig;
-use QuantaQuirk\QuantaQuirkIgnition\FlareMiddleware\AddJobs;
-use QuantaQuirk\QuantaQuirkIgnition\FlareMiddleware\AddLogs;
-use QuantaQuirk\QuantaQuirkIgnition\FlareMiddleware\AddQueries;
-use QuantaQuirk\QuantaQuirkIgnition\Recorders\DumpRecorder\DumpRecorder;
-use QuantaQuirk\QuantaQuirkIgnition\Recorders\JobRecorder\JobRecorder;
-use QuantaQuirk\QuantaQuirkIgnition\Recorders\LogRecorder\LogRecorder;
-use QuantaQuirk\QuantaQuirkIgnition\Recorders\QueryRecorder\QueryRecorder;
-use QuantaQuirk\QuantaQuirkIgnition\Renderers\IgnitionExceptionRenderer;
-use QuantaQuirk\QuantaQuirkIgnition\Solutions\SolutionProviders\SolutionProviderRepository;
-use QuantaQuirk\QuantaQuirkIgnition\Support\FlareLogHandler;
-use QuantaQuirk\QuantaQuirkIgnition\Support\SentReports;
-use QuantaQuirk\QuantaQuirkIgnition\Views\ViewExceptionMapper;
+use QuantaForge\FlareClient\Flare;
+use QuantaForge\FlareClient\FlareMiddleware\AddSolutions;
+use QuantaForge\Ignition\Config\FileConfigManager;
+use QuantaForge\Ignition\Config\IgnitionConfig;
+use QuantaForge\Ignition\Contracts\ConfigManager;
+use QuantaForge\Ignition\Contracts\SolutionProviderRepository as SolutionProviderRepositoryContract;
+use QuantaForge\Ignition\Ignition;
+use QuantaForge\QuantaForgeIgnition\Commands\SolutionMakeCommand;
+use QuantaForge\QuantaForgeIgnition\Commands\SolutionProviderMakeCommand;
+use QuantaForge\QuantaForgeIgnition\Commands\TestCommand;
+use QuantaForge\QuantaForgeIgnition\ContextProviders\QuantaForgeContextProviderDetector;
+use QuantaForge\QuantaForgeIgnition\Exceptions\InvalidConfig;
+use QuantaForge\QuantaForgeIgnition\FlareMiddleware\AddJobs;
+use QuantaForge\QuantaForgeIgnition\FlareMiddleware\AddLogs;
+use QuantaForge\QuantaForgeIgnition\FlareMiddleware\AddQueries;
+use QuantaForge\QuantaForgeIgnition\Recorders\DumpRecorder\DumpRecorder;
+use QuantaForge\QuantaForgeIgnition\Recorders\JobRecorder\JobRecorder;
+use QuantaForge\QuantaForgeIgnition\Recorders\LogRecorder\LogRecorder;
+use QuantaForge\QuantaForgeIgnition\Recorders\QueryRecorder\QueryRecorder;
+use QuantaForge\QuantaForgeIgnition\Renderers\IgnitionExceptionRenderer;
+use QuantaForge\QuantaForgeIgnition\Solutions\SolutionProviders\SolutionProviderRepository;
+use QuantaForge\QuantaForgeIgnition\Support\FlareLogHandler;
+use QuantaForge\QuantaForgeIgnition\Support\SentReports;
+use QuantaForge\QuantaForgeIgnition\Views\ViewExceptionMapper;
 
 class IgnitionServiceProvider extends ServiceProvider
 {
@@ -102,7 +102,7 @@ class IgnitionServiceProvider extends ServiceProvider
     protected function registerRenderer(): void
     {
         $this->app->bind(
-            'QuantaQuirk\Contracts\Foundation\ExceptionRenderer',
+            'QuantaForge\Contracts\Foundation\ExceptionRenderer',
             fn (Application $app) => $app->make(IgnitionExceptionRenderer::class)
         );
     }
@@ -115,7 +115,7 @@ class IgnitionServiceProvider extends ServiceProvider
                 ->setBaseUrl(config('flare.base_url', 'https://flareapp.io/api'))
                 ->applicationPath(base_path())
                 ->setStage(app()->environment())
-                ->setContextProviderDetector(new QuantaQuirkContextProviderDetector())
+                ->setContextProviderDetector(new QuantaForgeContextProviderDetector())
                 ->registerMiddleware($this->getFlareMiddleware())
                 ->registerMiddleware(new AddSolutions(new SolutionProviderRepository($this->getSolutionProviders())))
                 ->argumentReducers(config('ignition.argument_reducers', []))
@@ -255,13 +255,13 @@ class IgnitionServiceProvider extends ServiceProvider
         // Reset before executing a queue job to make sure the job's log/query/dump recorders are empty.
         // When using a sync queue this also reports the queued reports from previous exceptions.
         $queue->before(function () {
-            $this->resetFlareAndQuantaQuirkIgnition();
+            $this->resetFlareAndQuantaForgeIgnition();
             app(Flare::class)->sendReportsImmediately();
         });
 
         // Send queued reports (and reset) after executing a queue job.
         $queue->after(function () {
-            $this->resetFlareAndQuantaQuirkIgnition();
+            $this->resetFlareAndQuantaForgeIgnition();
         });
 
         // Note: the $queue->looping() event can't be used because it's not triggered on Vapor
@@ -312,23 +312,23 @@ class IgnitionServiceProvider extends ServiceProvider
     protected function setupOctane(): void
     {
         $this->app['events']->listen(RequestReceived::class, function () {
-            $this->resetFlareAndQuantaQuirkIgnition();
+            $this->resetFlareAndQuantaForgeIgnition();
         });
 
         $this->app['events']->listen(TaskReceived::class, function () {
-            $this->resetFlareAndQuantaQuirkIgnition();
+            $this->resetFlareAndQuantaForgeIgnition();
         });
 
         $this->app['events']->listen(TickReceived::class, function () {
-            $this->resetFlareAndQuantaQuirkIgnition();
+            $this->resetFlareAndQuantaForgeIgnition();
         });
 
         $this->app['events']->listen(RequestTerminated::class, function () {
-            $this->resetFlareAndQuantaQuirkIgnition();
+            $this->resetFlareAndQuantaForgeIgnition();
         });
     }
 
-    protected function resetFlareAndQuantaQuirkIgnition(): void
+    protected function resetFlareAndQuantaForgeIgnition(): void
     {
         $this->app->get(SentReports::class)->clear();
         $this->app->get(Ignition::class)->reset();

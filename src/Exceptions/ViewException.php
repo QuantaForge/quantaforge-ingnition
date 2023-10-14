@@ -1,10 +1,10 @@
 <?php
 
-namespace QuantaQuirk\QuantaQuirkIgnition\Exceptions;
+namespace QuantaForge\QuantaForgeIgnition\Exceptions;
 
 use ErrorException;
-use QuantaQuirk\FlareClient\Contracts\ProvidesFlareContext;
-use QuantaQuirk\QuantaQuirkIgnition\Recorders\DumpRecorder\HtmlDumper;
+use QuantaForge\FlareClient\Contracts\ProvidesFlareContext;
+use QuantaForge\QuantaForgeIgnition\Recorders\DumpRecorder\HtmlDumper;
 
 class ViewException extends ErrorException implements ProvidesFlareContext
 {

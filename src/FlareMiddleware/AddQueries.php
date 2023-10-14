@@ -1,9 +1,9 @@
 <?php
 
-namespace QuantaQuirk\QuantaQuirkIgnition\FlareMiddleware;
+namespace QuantaForge\QuantaForgeIgnition\FlareMiddleware;
 
-use QuantaQuirk\FlareClient\Report;
-use QuantaQuirk\QuantaQuirkIgnition\Recorders\QueryRecorder\QueryRecorder;
+use QuantaForge\FlareClient\Report;
+use QuantaForge\QuantaForgeIgnition\Recorders\QueryRecorder\QueryRecorder;
 
 class AddQueries
 {

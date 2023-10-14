@@ -1,8 +1,8 @@
 <?php
 
-use QuantaQuirk\Support\Facades\View;
-use QuantaQuirk\Ignition\Solutions\SolutionProviders\MergeConflictSolutionProvider;
-use QuantaQuirk\QuantaQuirkIgnition\Tests\stubs\Controllers\GitConflictController;
+use QuantaForge\Support\Facades\View;
+use QuantaForge\Ignition\Solutions\SolutionProviders\MergeConflictSolutionProvider;
+use QuantaForge\QuantaForgeIgnition\Tests\stubs\Controllers\GitConflictController;
 
 beforeEach(function () {
     View::addLocation(__DIR__.'/../stubs/views');

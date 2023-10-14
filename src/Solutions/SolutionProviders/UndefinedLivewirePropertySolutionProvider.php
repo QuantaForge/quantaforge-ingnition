@@ -1,11 +1,11 @@
 <?php
 
-namespace QuantaQuirk\QuantaQuirkIgnition\Solutions\SolutionProviders;
+namespace QuantaForge\QuantaForgeIgnition\Solutions\SolutionProviders;
 
 use Livewire\Exceptions\PropertyNotFoundException;
-use QuantaQuirk\Ignition\Contracts\HasSolutionsForThrowable;
-use QuantaQuirk\QuantaQuirkIgnition\Solutions\SuggestLivewirePropertyNameSolution;
-use QuantaQuirk\QuantaQuirkIgnition\Support\LivewireComponentParser;
+use QuantaForge\Ignition\Contracts\HasSolutionsForThrowable;
+use QuantaForge\QuantaForgeIgnition\Solutions\SuggestLivewirePropertyNameSolution;
+use QuantaForge\QuantaForgeIgnition\Support\LivewireComponentParser;
 use Throwable;
 
 class UndefinedLivewirePropertySolutionProvider implements HasSolutionsForThrowable

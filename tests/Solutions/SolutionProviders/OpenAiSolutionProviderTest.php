@@ -1,6 +1,6 @@
 <?php
 
-use QuantaQuirk\QuantaQuirkIgnition\Solutions\SolutionProviders\OpenAiSolutionProvider;
+use QuantaForge\QuantaForgeIgnition\Solutions\SolutionProviders\OpenAiSolutionProvider;
 
 it('can solve an an exception using ai', function () {
     if (! canRunOpenAiTest()) {

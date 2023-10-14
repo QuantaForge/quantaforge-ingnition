@@ -1,7 +1,7 @@
 <?php
 
-use QuantaQuirk\Support\Facades\Validator;
-use QuantaQuirk\QuantaQuirkIgnition\Solutions\SolutionProviders\UnknownValidationSolutionProvider;
+use QuantaForge\Support\Facades\Validator;
+use QuantaForge\QuantaForgeIgnition\Solutions\SolutionProviders\UnknownValidationSolutionProvider;
 
 it('can solve the exception', function () {
     $canSolve = app(UnknownValidationSolutionProvider::class)->canSolve(getBadMethodCallException());
@@ -14,7 +14,7 @@ it('can recommend changing the rule', function (string $invalidRule, string $rec
 
     Validator::extendImplicit('bar_a', fn ($attribute, $value, $parameters, $validator) => $value == 'bar');
 
-    /** @var \QuantaQuirk\Ignition\Contracts\Solution $solution */
+    /** @var \QuantaForge\Ignition\Contracts\Solution $solution */
     $solution = app(UnknownValidationSolutionProvider::class)->getSolutions(getBadMethodCallException($invalidRule))[0];
 
     expect($solution->getSolutionDescription())->toEqual("Did you mean `{$recommendedRule}` ?");

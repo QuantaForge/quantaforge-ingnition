@@ -1,14 +1,14 @@
 <?php
 
-namespace QuantaQuirk\QuantaQuirkIgnition\Support;
+namespace QuantaForge\QuantaForgeIgnition\Support;
 
 use InvalidArgumentException;
 use Monolog\Handler\AbstractProcessingHandler;
 use Monolog\Level;
 use Monolog\Logger;
 use Monolog\LogRecord;
-use QuantaQuirk\FlareClient\Flare;
-use QuantaQuirk\FlareClient\Report;
+use QuantaForge\FlareClient\Flare;
+use QuantaForge\FlareClient\Report;
 use Throwable;
 
 class FlareLogHandler extends AbstractProcessingHandler

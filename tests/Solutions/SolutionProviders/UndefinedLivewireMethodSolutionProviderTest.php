@@ -1,9 +1,9 @@
 <?php
 
 use Livewire\Exceptions\MethodNotFoundException;
-use QuantaQuirk\QuantaQuirkIgnition\Solutions\SolutionProviders\UndefinedLivewireMethodSolutionProvider;
-use QuantaQuirk\QuantaQuirkIgnition\Tests\stubs\Components\TestLivewireComponent;
-use QuantaQuirk\QuantaQuirkIgnition\Tests\TestClasses\FakeLivewireManager;
+use QuantaForge\QuantaForgeIgnition\Solutions\SolutionProviders\UndefinedLivewireMethodSolutionProvider;
+use QuantaForge\QuantaForgeIgnition\Tests\stubs\Components\TestLivewireComponent;
+use QuantaForge\QuantaForgeIgnition\Tests\TestClasses\FakeLivewireManager;
 
 it('can solve an unknown livewire method', function () {
     FakeLivewireManager::setUp()->addAlias('test-livewire-component', TestLivewireComponent::class);
@@ -15,6 +15,6 @@ it('can solve an unknown livewire method', function () {
 
     expect($canSolve)->toBeTrue();
 
-    expect($solution->getSolutionTitle())->toBe('Possible typo `QuantaQuirk\QuantaQuirkIgnition\Tests\stubs\Components\TestLivewireComponent::chnge`');
-    expect($solution->getSolutionDescription())->toBe('Did you mean `QuantaQuirk\QuantaQuirkIgnition\Tests\stubs\Components\TestLivewireComponent::change`?');
+    expect($solution->getSolutionTitle())->toBe('Possible typo `QuantaForge\QuantaForgeIgnition\Tests\stubs\Components\TestLivewireComponent::chnge`');
+    expect($solution->getSolutionDescription())->toBe('Did you mean `QuantaForge\QuantaForgeIgnition\Tests\stubs\Components\TestLivewireComponent::change`?');
 });

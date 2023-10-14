@@ -1,14 +1,14 @@
 <?php
 
-namespace QuantaQuirk\QuantaQuirkIgnition\Tests\stubs\Jobs;
+namespace QuantaForge\QuantaForgeIgnition\Tests\stubs\Jobs;
 
 use Carbon\CarbonImmutable;
 use Exception;
-use QuantaQuirk\Bus\Queueable;
-use QuantaQuirk\Contracts\Queue\ShouldQueue;
-use QuantaQuirk\Foundation\Bus\Dispatchable;
-use QuantaQuirk\Queue\InteractsWithQueue;
-use QuantaQuirk\Queue\SerializesModels;
+use QuantaForge\Bus\Queueable;
+use QuantaForge\Contracts\Queue\ShouldQueue;
+use QuantaForge\Foundation\Bus\Dispatchable;
+use QuantaForge\Queue\InteractsWithQueue;
+use QuantaForge\Queue\SerializesModels;
 
 class QueueableJob implements ShouldQueue
 {

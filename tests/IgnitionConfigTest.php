@@ -1,7 +1,7 @@
 <?php
 
-use QuantaQuirk\Container\Container;
-use QuantaQuirk\Ignition\Config\IgnitionConfig;
+use QuantaForge\Container\Container;
+use QuantaForge\Ignition\Config\IgnitionConfig;
 
 it('does not enable runnable solutions in debug mode by default', function () {
     config()->set('app.debug', true);

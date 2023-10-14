@@ -1,10 +1,10 @@
 <?php
 
-namespace QuantaQuirk\QuantaQuirkIgnition\Tests\TestClasses;
+namespace QuantaForge\QuantaForgeIgnition\Tests\TestClasses;
 
-use QuantaQuirk\Backtrace\Arguments\ReducedArgument\ReducedArgument;
-use QuantaQuirk\Backtrace\Arguments\ReducedArgument\ReducedArgumentContract;
-use QuantaQuirk\Backtrace\Arguments\Reducers\ArgumentReducer;
+use QuantaForge\Backtrace\Arguments\ReducedArgument\ReducedArgument;
+use QuantaForge\Backtrace\Arguments\ReducedArgument\ReducedArgumentContract;
+use QuantaForge\Backtrace\Arguments\Reducers\ArgumentReducer;
 
 class FakeArgumentsReducer implements ArgumentReducer
 {

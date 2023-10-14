@@ -1,6 +1,6 @@
 <?php
 
-namespace QuantaQuirk\QuantaQuirkIgnition\Tests\Support\Models;
+namespace QuantaForge\QuantaForgeIgnition\Tests\Support\Models;
 
 class Car
 {

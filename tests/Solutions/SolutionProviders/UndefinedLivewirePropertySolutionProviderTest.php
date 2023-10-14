@@ -1,9 +1,9 @@
 <?php
 
 use Livewire\Exceptions\PropertyNotFoundException;
-use QuantaQuirk\QuantaQuirkIgnition\Solutions\SolutionProviders\UndefinedLivewirePropertySolutionProvider;
-use QuantaQuirk\QuantaQuirkIgnition\Tests\stubs\Components\TestLivewireComponent;
-use QuantaQuirk\QuantaQuirkIgnition\Tests\TestClasses\FakeLivewireManager;
+use QuantaForge\QuantaForgeIgnition\Solutions\SolutionProviders\UndefinedLivewirePropertySolutionProvider;
+use QuantaForge\QuantaForgeIgnition\Tests\stubs\Components\TestLivewireComponent;
+use QuantaForge\QuantaForgeIgnition\Tests\TestClasses\FakeLivewireManager;
 
 it('can solve an unknown livewire computed property', function () {
     FakeLivewireManager::setUp()->addAlias('test-livewire-component', TestLivewireComponent::class);

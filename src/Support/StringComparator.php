@@ -1,8 +1,8 @@
 <?php
 
-namespace QuantaQuirk\QuantaQuirkIgnition\Support;
+namespace QuantaForge\QuantaForgeIgnition\Support;
 
-use QuantaQuirk\Support\Collection;
+use QuantaForge\Support\Collection;
 
 class StringComparator
 {

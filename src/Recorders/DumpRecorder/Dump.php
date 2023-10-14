@@ -1,6 +1,6 @@
 <?php
 
-namespace QuantaQuirk\QuantaQuirkIgnition\Recorders\DumpRecorder;
+namespace QuantaForge\QuantaForgeIgnition\Recorders\DumpRecorder;
 
 class Dump
 {

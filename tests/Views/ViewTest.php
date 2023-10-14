@@ -1,7 +1,7 @@
 <?php
 
-use QuantaQuirk\Support\Facades\Route;
-use QuantaQuirk\Support\Facades\View;
+use QuantaForge\Support\Facades\Route;
+use QuantaForge\Support\Facades\View;
 
 beforeEach(function () {
     View::addLocation(__DIR__ . '/../stubs/views');
@@ -16,7 +16,7 @@ beforeEach(function () {
 
 it('renders a view exception wrapper instead of the original blade exception', function () {
     $this->get('/blade-exception')
-        ->assertSee('QuantaQuirk\QuantaQuirkIgnition\Exceptions\ViewException');
+        ->assertSee('QuantaForge\QuantaForgeIgnition\Exceptions\ViewException');
 });
 
 it('renders the original line number in view exceptions', function () {

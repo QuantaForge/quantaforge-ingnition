@@ -1,14 +1,14 @@
 <?php
 
-namespace QuantaQuirk\QuantaQuirkIgnition\Solutions\SolutionProviders;
+namespace QuantaForge\QuantaForgeIgnition\Solutions\SolutionProviders;
 
-use QuantaQuirk\Broadcasting\BroadcastException;
-use QuantaQuirk\Ignition\Contracts\BaseSolution;
-use QuantaQuirk\Ignition\Contracts\HasSolutionsForThrowable;
-use QuantaQuirk\QuantaQuirkIgnition\Support\QuantaQuirkVersion;
+use QuantaForge\Broadcasting\BroadcastException;
+use QuantaForge\Ignition\Contracts\BaseSolution;
+use QuantaForge\Ignition\Contracts\HasSolutionsForThrowable;
+use QuantaForge\QuantaForgeIgnition\Support\QuantaForgeVersion;
 use Throwable;
 
-class GenericQuantaQuirkExceptionSolutionProvider implements HasSolutionsForThrowable
+class GenericQuantaForgeExceptionSolutionProvider implements HasSolutionsForThrowable
 {
     public function canSolve(Throwable $throwable): bool
     {
@@ -47,7 +47,7 @@ class GenericQuantaQuirkExceptionSolutionProvider implements HasSolutionsForThro
     /** @return array<string, mixed> */
     protected function getSupportedExceptions(): array
     {
-        $majorVersion = QuantaQuirkVersion::major();
+        $majorVersion = QuantaForgeVersion::major();
 
         return
         [
@@ -55,7 +55,7 @@ class GenericQuantaQuirkExceptionSolutionProvider implements HasSolutionsForThro
                 'title' => 'Here are some links that might help solve this problem',
                 'description' => '',
                 'links' => [
-                    'QuantaQuirk docs on authentication' => "https://quantaquirk.com/docs/{$majorVersion}.x/authentication",
+                    'QuantaForge docs on authentication' => "https://quantaforge.com/docs/{$majorVersion}.x/authentication",
                 ],
             ],
         ];

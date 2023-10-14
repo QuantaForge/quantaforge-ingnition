@@ -1,10 +1,10 @@
 <?php
 
-use QuantaQuirk\Database\QueryException;
-use QuantaQuirk\QuantaQuirkIgnition\Facades\Flare;
+use QuantaForge\Database\QueryException;
+use QuantaForge\QuantaForgeIgnition\Facades\Flare;
 
 it('will add query information with a query exception', function () {
-    $sql = 'select * from users where emai = "ruben@quantaquirk.be"';
+    $sql = 'select * from users where emai = "ruben@quantaforge.be"';
 
     $report = Flare::createReport(new QueryException(
         'default',

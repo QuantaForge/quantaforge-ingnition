@@ -2,7 +2,7 @@
 
 namespace DummyNamespace;
 
-use QuantaQuirk\Ignition\Contracts\Solution;
+use QuantaForge\Ignition\Contracts\Solution;
 
 class DummyClass implements Solution
 {

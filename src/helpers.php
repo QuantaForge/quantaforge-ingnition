@@ -1,6 +1,6 @@
 <?php
 
-use QuantaQuirk\QuantaQuirkIgnition\Renderers\ErrorPageRenderer;
+use QuantaForge\QuantaForgeIgnition\Renderers\ErrorPageRenderer;
 
 if (! function_exists('ddd')) {
     function ddd()

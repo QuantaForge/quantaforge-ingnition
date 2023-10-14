@@ -1,10 +1,10 @@
 {
-    "name": "quantaquirk/quantaquirk-ignition",
-    "description": "A beautiful error page for QuantaQuirk applications.",
+    "name": "quantaforge/quantaforge-ignition",
+    "description": "A beautiful error page for QuantaForge applications.",
     "keywords": [
         "error",
         "page",
-        "quantaquirk",
+        "quantaforge",
         "flare"
     ],
     "license": "proprietary",
@@ -19,9 +19,9 @@
         "ext-curl": "*",
         "ext-json": "*",
         "ext-mbstring": "*",
-        "quantaquirk/support": "^1.0.0",
-        "quantaquirk/flare-client-php": "^1.0.0",
-        "quantaquirk/ignition": "^1.0.0",
+        "quantaforge/support": "^1.0.0",
+        "quantaforge/flare-client-php": "^1.0.0",
+        "quantaforge/ignition": "^1.0.0",
         "symfony/console": "^6.2.3",
         "symfony/var-dumper": "^6.2.3"
     },
@@ -48,18 +48,18 @@
         }
     },
     "extra": {
-        "quantaquirk": {
+        "quantaforge": {
             "providers": [
-                "QuantaQuirk\\QuantaQuirkIgnition\\IgnitionServiceProvider"
+                "QuantaForge\\QuantaForgeIgnition\\IgnitionServiceProvider"
             ],
             "aliases": {
-                "Flare": "QuantaQuirk\\QuantaQuirkIgnition\\Facades\\Flare"
+                "Flare": "QuantaForge\\QuantaForgeIgnition\\Facades\\Flare"
             }
         }
     },
     "autoload": {
         "psr-4": {
-            "QuantaQuirk\\QuantaQuirkIgnition\\": "src"
+            "QuantaForge\\QuantaForgeIgnition\\": "src"
         },
         "files": [
             "src/helpers.php"
@@ -67,7 +67,7 @@
     },
     "autoload-dev": {
         "psr-4": {
-            "QuantaQuirk\\QuantaQuirkIgnition\\Tests\\": "tests"
+            "QuantaForge\\QuantaForgeIgnition\\Tests\\": "tests"
         }
     },
 

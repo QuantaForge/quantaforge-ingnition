@@ -1,14 +1,14 @@
 <?php
 
-namespace QuantaQuirk\QuantaQuirkIgnition\Recorders\LogRecorder;
+namespace QuantaForge\QuantaForgeIgnition\Recorders\LogRecorder;
 
-use QuantaQuirk\Contracts\Foundation\Application;
-use QuantaQuirk\Log\Events\MessageLogged;
+use QuantaForge\Contracts\Foundation\Application;
+use QuantaForge\Log\Events\MessageLogged;
 use Throwable;
 
 class LogRecorder
 {
-    /** @var \QuantaQuirk\QuantaQuirkIgnition\Recorders\LogRecorder\LogMessage[] */
+    /** @var \QuantaForge\QuantaForgeIgnition\Recorders\LogRecorder\LogMessage[] */
     protected array $logMessages = [];
 
     protected Application $app;

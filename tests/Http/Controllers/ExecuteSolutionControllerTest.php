@@ -66,6 +66,6 @@ function solutionPayload(): array
             'variableName' => 'test',
             'viewFile' => 'resources/views/welcome.blade.php',
         ],
-        'solution' => 'QuantaQuirk\\QuantaQuirkIgnition\\Solutions\\MakeViewVariableOptionalSolution',
+        'solution' => 'QuantaForge\\QuantaForgeIgnition\\Solutions\\MakeViewVariableOptionalSolution',
     ];
 }

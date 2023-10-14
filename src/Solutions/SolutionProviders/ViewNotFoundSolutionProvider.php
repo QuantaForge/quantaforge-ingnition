@@ -1,14 +1,14 @@
 <?php
 
-namespace QuantaQuirk\QuantaQuirkIgnition\Solutions\SolutionProviders;
+namespace QuantaForge\QuantaForgeIgnition\Solutions\SolutionProviders;
 
-use QuantaQuirk\Support\Arr;
-use QuantaQuirk\Support\Facades\View;
+use QuantaForge\Support\Arr;
+use QuantaForge\Support\Facades\View;
 use InvalidArgumentException;
-use QuantaQuirk\Ignition\Contracts\BaseSolution;
-use QuantaQuirk\Ignition\Contracts\HasSolutionsForThrowable;
-use QuantaQuirk\QuantaQuirkIgnition\Exceptions\ViewException;
-use QuantaQuirk\QuantaQuirkIgnition\Support\StringComparator;
+use QuantaForge\Ignition\Contracts\BaseSolution;
+use QuantaForge\Ignition\Contracts\HasSolutionsForThrowable;
+use QuantaForge\QuantaForgeIgnition\Exceptions\ViewException;
+use QuantaForge\QuantaForgeIgnition\Support\StringComparator;
 use Symfony\Component\Finder\Finder;
 use Symfony\Component\Finder\SplFileInfo;
 use Throwable;
@@ -59,7 +59,7 @@ class ViewNotFoundSolutionProvider implements HasSolutionsForThrowable
     /** @return array<int, string> */
     protected function getAllViews(): array
     {
-        /** @var \QuantaQuirk\View\FileViewFinder $fileViewFinder */
+        /** @var \QuantaForge\View\FileViewFinder $fileViewFinder */
         $fileViewFinder = View::getFinder();
 
         $extensions = $fileViewFinder->getExtensions();

@@ -1,12 +1,12 @@
 <?php
 
-namespace QuantaQuirk\QuantaQuirkIgnition\Solutions\SolutionProviders;
+namespace QuantaForge\QuantaForgeIgnition\Solutions\SolutionProviders;
 
-use QuantaQuirk\Support\Str;
-use QuantaQuirk\Ignition\Contracts\BaseSolution;
-use QuantaQuirk\Ignition\Contracts\HasSolutionsForThrowable;
-use QuantaQuirk\QuantaQuirkIgnition\Support\Composer\ComposerClassMap;
-use QuantaQuirk\QuantaQuirkIgnition\Support\StringComparator;
+use QuantaForge\Support\Str;
+use QuantaForge\Ignition\Contracts\BaseSolution;
+use QuantaForge\Ignition\Contracts\HasSolutionsForThrowable;
+use QuantaForge\QuantaForgeIgnition\Support\Composer\ComposerClassMap;
+use QuantaForge\QuantaForgeIgnition\Support\StringComparator;
 use Throwable;
 use UnexpectedValueException;
 

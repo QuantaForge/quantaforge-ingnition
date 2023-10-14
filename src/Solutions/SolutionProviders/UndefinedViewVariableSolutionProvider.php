@@ -1,13 +1,13 @@
 <?php
 
-namespace QuantaQuirk\QuantaQuirkIgnition\Solutions\SolutionProviders;
+namespace QuantaForge\QuantaForgeIgnition\Solutions\SolutionProviders;
 
-use QuantaQuirk\Ignition\Contracts\BaseSolution;
-use QuantaQuirk\Ignition\Contracts\HasSolutionsForThrowable;
-use QuantaQuirk\Ignition\Contracts\Solution;
-use QuantaQuirk\QuantaQuirkIgnition\Exceptions\ViewException;
-use QuantaQuirk\QuantaQuirkIgnition\Solutions\MakeViewVariableOptionalSolution;
-use QuantaQuirk\QuantaQuirkIgnition\Solutions\SuggestCorrectVariableNameSolution;
+use QuantaForge\Ignition\Contracts\BaseSolution;
+use QuantaForge\Ignition\Contracts\HasSolutionsForThrowable;
+use QuantaForge\Ignition\Contracts\Solution;
+use QuantaForge\QuantaForgeIgnition\Exceptions\ViewException;
+use QuantaForge\QuantaForgeIgnition\Solutions\MakeViewVariableOptionalSolution;
+use QuantaForge\QuantaForgeIgnition\Solutions\SuggestCorrectVariableNameSolution;
 use Throwable;
 
 class UndefinedViewVariableSolutionProvider implements HasSolutionsForThrowable
@@ -47,11 +47,11 @@ class UndefinedViewVariableSolutionProvider implements HasSolutionsForThrowable
     }
 
     /**
-     * @param \QuantaQuirk\QuantaQuirkIgnition\Exceptions\ViewException $throwable
+     * @param \QuantaForge\QuantaForgeIgnition\Exceptions\ViewException $throwable
      * @param string $variableName
      * @param string $viewFile
      *
-     * @return array<int, \QuantaQuirk\Ignition\Contracts\Solution>
+     * @return array<int, \QuantaForge\Ignition\Contracts\Solution>
      */
     protected function findCorrectVariableSolutions(
         ViewException $throwable,

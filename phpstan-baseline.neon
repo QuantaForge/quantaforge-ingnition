@@ -3,22 +3,22 @@ parameters:
 		-
 			message: "#^Cannot call method toFlare\\(\\) on class\\-string\\|object\\.$#"
 			count: 1
-			path: src/ContextProviders/QuantaQuirkRequestContextProvider.php
+			path: src/ContextProviders/QuantaForgeRequestContextProvider.php
 
 		-
 			message: "#^Expression on left side of \\?\\? is not nullable\\.$#"
 			count: 1
-			path: src/ContextProviders/QuantaQuirkRequestContextProvider.php
+			path: src/ContextProviders/QuantaForgeRequestContextProvider.php
 
 		-
-			message: "#^Method QuantaQuirk\\\\QuantaQuirkIgnition\\\\ContextProviders\\\\QuantaQuirkRequestContextProvider\\:\\:toArray\\(\\) should return array\\<int, mixed\\> but returns array\\<string, mixed\\>\\.$#"
+			message: "#^Method QuantaForge\\\\QuantaForgeIgnition\\\\ContextProviders\\\\QuantaForgeRequestContextProvider\\:\\:toArray\\(\\) should return array\\<int, mixed\\> but returns array\\<string, mixed\\>\\.$#"
 			count: 1
-			path: src/ContextProviders/QuantaQuirkRequestContextProvider.php
+			path: src/ContextProviders/QuantaForgeRequestContextProvider.php
 
 		-
-			message: "#^Return type \\(array\\<int, mixed\\>\\) of method QuantaQuirk\\\\QuantaQuirkIgnition\\\\ContextProviders\\\\QuantaQuirkRequestContextProvider\\:\\:toArray\\(\\) should be compatible with return type \\(array\\<string, mixed\\>\\) of method QuantaQuirk\\\\FlareClient\\\\Context\\\\RequestContextProvider\\:\\:toArray\\(\\)$#"
+			message: "#^Return type \\(array\\<int, mixed\\>\\) of method QuantaForge\\\\QuantaForgeIgnition\\\\ContextProviders\\\\QuantaForgeRequestContextProvider\\:\\:toArray\\(\\) should be compatible with return type \\(array\\<string, mixed\\>\\) of method QuantaForge\\\\FlareClient\\\\Context\\\\RequestContextProvider\\:\\:toArray\\(\\)$#"
 			count: 1
-			path: src/ContextProviders/QuantaQuirkRequestContextProvider.php
+			path: src/ContextProviders/QuantaForgeRequestContextProvider.php
 
 		-
 			message: "#^Parameter \\#1 \\$callback of function array_map expects \\(callable\\(0\\|1\\|2\\|3\\|4\\|5\\|6\\|7\\)\\: mixed\\)\\|null, Closure\\(string\\)\\: string given\\.$#"
@@ -26,7 +26,7 @@ parameters:
 			path: src/Exceptions/InvalidConfig.php
 
 		-
-			message: "#^Parameter \\#1 \\$invalidController of method QuantaQuirk\\\\QuantaQuirkIgnition\\\\Solutions\\\\SolutionProviders\\\\InvalidRouteActionSolutionProvider\\:\\:findRelatedController\\(\\) expects string, string\\|null given\\.$#"
+			message: "#^Parameter \\#1 \\$invalidController of method QuantaForge\\\\QuantaForgeIgnition\\\\Solutions\\\\SolutionProviders\\\\InvalidRouteActionSolutionProvider\\:\\:findRelatedController\\(\\) expects string, string\\|null given\\.$#"
 			count: 1
 			path: src/Solutions/SolutionProviders/InvalidRouteActionSolutionProvider.php
 
@@ -41,27 +41,27 @@ parameters:
 			path: src/Solutions/SolutionProviders/InvalidRouteActionSolutionProvider.php
 
 		-
-			message: "#^Method QuantaQuirk\\\\QuantaQuirkIgnition\\\\Solutions\\\\SolutionProviders\\\\UnknownValidationSolutionProvider\\:\\:getAvailableMethods\\(\\) return type with generic class QuantaQuirk\\\\Support\\\\Collection does not specify its types\\: TKey, TValue$#"
+			message: "#^Method QuantaForge\\\\QuantaForgeIgnition\\\\Solutions\\\\SolutionProviders\\\\UnknownValidationSolutionProvider\\:\\:getAvailableMethods\\(\\) return type with generic class QuantaForge\\\\Support\\\\Collection does not specify its types\\: TKey, TValue$#"
 			count: 1
 			path: src/Solutions/SolutionProviders/UnknownValidationSolutionProvider.php
 
 		-
-			message: "#^Parameter \\#1 \\$callback of method QuantaQuirk\\\\Support\\\\Collection\\<int,ReflectionMethod\\>\\:\\:filter\\(\\) expects \\(callable\\(ReflectionMethod, int\\)\\: bool\\)\\|null, Closure\\(ReflectionMethod\\)\\: 0\\|1\\|false given\\.$#"
+			message: "#^Parameter \\#1 \\$callback of method QuantaForge\\\\Support\\\\Collection\\<int,ReflectionMethod\\>\\:\\:filter\\(\\) expects \\(callable\\(ReflectionMethod, int\\)\\: bool\\)\\|null, Closure\\(ReflectionMethod\\)\\: 0\\|1\\|false given\\.$#"
 			count: 1
 			path: src/Solutions/SolutionProviders/UnknownValidationSolutionProvider.php
 
 		-
-			message: "#^Unable to resolve the template type TMakeKey in call to method static method QuantaQuirk\\\\Support\\\\Collection\\<\\(int\\|string\\),mixed\\>\\:\\:make\\(\\)$#"
+			message: "#^Unable to resolve the template type TMakeKey in call to method static method QuantaForge\\\\Support\\\\Collection\\<\\(int\\|string\\),mixed\\>\\:\\:make\\(\\)$#"
 			count: 1
 			path: src/Solutions/SolutionProviders/UnknownValidationSolutionProvider.php
 
 		-
-			message: "#^Unable to resolve the template type TMakeValue in call to method static method QuantaQuirk\\\\Support\\\\Collection\\<\\(int\\|string\\),mixed\\>\\:\\:make\\(\\)$#"
+			message: "#^Unable to resolve the template type TMakeValue in call to method static method QuantaForge\\\\Support\\\\Collection\\<\\(int\\|string\\),mixed\\>\\:\\:make\\(\\)$#"
 			count: 1
 			path: src/Solutions/SolutionProviders/UnknownValidationSolutionProvider.php
 
 		-
-			message: "#^Parameter \\#1 \\$missingView of method QuantaQuirk\\\\QuantaQuirkIgnition\\\\Solutions\\\\SolutionProviders\\\\ViewNotFoundSolutionProvider\\:\\:findRelatedView\\(\\) expects string, string\\|null given\\.$#"
+			message: "#^Parameter \\#1 \\$missingView of method QuantaForge\\\\QuantaForgeIgnition\\\\Solutions\\\\SolutionProviders\\\\ViewNotFoundSolutionProvider\\:\\:findRelatedView\\(\\) expects string, string\\|null given\\.$#"
 			count: 1
 			path: src/Solutions/SolutionProviders/ViewNotFoundSolutionProvider.php
 
@@ -81,17 +81,17 @@ parameters:
 			path: src/Support/FlareLogHandler.php
 
 		-
-			message: "#^Parameter \\#1 \\$message of method QuantaQuirk\\\\FlareClient\\\\Flare\\:\\:reportMessage\\(\\) expects string, array\\|DateTimeImmutable\\|int\\|string\\|null given\\.$#"
+			message: "#^Parameter \\#1 \\$message of method QuantaForge\\\\FlareClient\\\\Flare\\:\\:reportMessage\\(\\) expects string, array\\|DateTimeImmutable\\|int\\|string\\|null given\\.$#"
 			count: 1
 			path: src/Support/FlareLogHandler.php
 
 		-
 			message: "#^Cannot call method getMessage\\(\\) on Throwable\\|null\\.$#"
 			count: 1
-			path: src/Support/QuantaQuirkDocumentationLinkFinder.php
+			path: src/Support/QuantaForgeDocumentationLinkFinder.php
 
 		-
-			message: "#^Call to an undefined method QuantaQuirk\\\\Contracts\\\\View\\\\Engine\\:\\:getCompiler\\(\\)\\.$#"
+			message: "#^Call to an undefined method QuantaForge\\\\Contracts\\\\View\\\\Engine\\:\\:getCompiler\\(\\)\\.$#"
 			count: 1
 			path: src/Views/ViewExceptionMapper.php
 
@@ -101,22 +101,22 @@ parameters:
 			path: src/Views/ViewExceptionMapper.php
 
 		-
-			message: "#^Method QuantaQuirk\\\\QuantaQuirkIgnition\\\\Views\\\\ViewExceptionMapper\\:\\:filterViewData\\(\\) has parameter \\$data with no value type specified in iterable type array\\.$#"
+			message: "#^Method QuantaForge\\\\QuantaForgeIgnition\\\\Views\\\\ViewExceptionMapper\\:\\:filterViewData\\(\\) has parameter \\$data with no value type specified in iterable type array\\.$#"
 			count: 1
 			path: src/Views/ViewExceptionMapper.php
 
 		-
-			message: "#^Method QuantaQuirk\\\\QuantaQuirkIgnition\\\\Views\\\\ViewExceptionMapper\\:\\:filterViewData\\(\\) return type has no value type specified in iterable type array\\.$#"
+			message: "#^Method QuantaForge\\\\QuantaForgeIgnition\\\\Views\\\\ViewExceptionMapper\\:\\:filterViewData\\(\\) return type has no value type specified in iterable type array\\.$#"
 			count: 1
 			path: src/Views/ViewExceptionMapper.php
 
 		-
-			message: "#^Method QuantaQuirk\\\\QuantaQuirkIgnition\\\\Views\\\\ViewExceptionMapper\\:\\:getKnownPaths\\(\\) return type has no value type specified in iterable type array\\.$#"
+			message: "#^Method QuantaForge\\\\QuantaForgeIgnition\\\\Views\\\\ViewExceptionMapper\\:\\:getKnownPaths\\(\\) return type has no value type specified in iterable type array\\.$#"
 			count: 1
 			path: src/Views/ViewExceptionMapper.php
 
 		-
-			message: "#^Method QuantaQuirk\\\\QuantaQuirkIgnition\\\\Views\\\\ViewExceptionMapper\\:\\:getViewData\\(\\) return type has no value type specified in iterable type array\\.$#"
+			message: "#^Method QuantaForge\\\\QuantaForgeIgnition\\\\Views\\\\ViewExceptionMapper\\:\\:getViewData\\(\\) return type has no value type specified in iterable type array\\.$#"
 			count: 1
 			path: src/Views/ViewExceptionMapper.php
 
@@ -126,7 +126,7 @@ parameters:
 			path: src/Views/ViewExceptionMapper.php
 
 		-
-			message: "#^Property QuantaQuirk\\\\QuantaQuirkIgnition\\\\Views\\\\ViewExceptionMapper\\:\\:\\$knownPaths type has no value type specified in iterable type array\\.$#"
+			message: "#^Property QuantaForge\\\\QuantaForgeIgnition\\\\Views\\\\ViewExceptionMapper\\:\\:\\$knownPaths type has no value type specified in iterable type array\\.$#"
 			count: 1
 			path: src/Views/ViewExceptionMapper.php
 

@@ -1,12 +1,12 @@
 <?php
 
-use QuantaQuirk\Foundation\Auth\User;
-use QuantaQuirk\Ignition\Contracts\BaseSolution;
-use QuantaQuirk\Ignition\Solutions\SolutionProviders\BadMethodCallSolutionProvider;
-use QuantaQuirk\Ignition\Solutions\SolutionProviders\SolutionProviderRepository;
-use QuantaQuirk\QuantaQuirkIgnition\Solutions\SolutionProviders\MissingAppKeySolutionProvider;
-use QuantaQuirk\QuantaQuirkIgnition\Tests\Exceptions\AlwaysFalseSolutionProvider;
-use QuantaQuirk\QuantaQuirkIgnition\Tests\Exceptions\AlwaysTrueSolutionProvider;
+use QuantaForge\Foundation\Auth\User;
+use QuantaForge\Ignition\Contracts\BaseSolution;
+use QuantaForge\Ignition\Solutions\SolutionProviders\BadMethodCallSolutionProvider;
+use QuantaForge\Ignition\Solutions\SolutionProviders\SolutionProviderRepository;
+use QuantaForge\QuantaForgeIgnition\Solutions\SolutionProviders\MissingAppKeySolutionProvider;
+use QuantaForge\QuantaForgeIgnition\Tests\Exceptions\AlwaysFalseSolutionProvider;
+use QuantaForge\QuantaForgeIgnition\Tests\Exceptions\AlwaysTrueSolutionProvider;
 
 it('returns possible solutions', function () {
     $repository = new SolutionProviderRepository();
@@ -38,7 +38,7 @@ it('returns possible solutions when registered together', function () {
 
 it('can suggest bad method call exceptions', function () {
     if (version_compare(app()->version(), '5.6.3', '<')) {
-        $this->markTestSkipped('QuantaQuirk version < 5.6.3 do not support bad method call solutions');
+        $this->markTestSkipped('QuantaForge version < 5.6.3 do not support bad method call solutions');
     }
 
     try {
@@ -56,7 +56,7 @@ it('can propose a solution for bad method call exceptions on collections', funct
     } catch (Exception $exception) {
         $solution = new BadMethodCallSolutionProvider();
 
-        expect($solution->getSolutions($exception)[0]->getSolutionDescription())->toBe('Did you mean QuantaQuirk\Support\Collection::first() ?');
+        expect($solution->getSolutions($exception)[0]->getSolutionDescription())->toBe('Did you mean QuantaForge\Support\Collection::first() ?');
     }
 });
 
@@ -67,7 +67,7 @@ it('can propose a solution for bad method call exceptions on models', function (
     } catch (Exception $exception) {
         $solution = new BadMethodCallSolutionProvider();
 
-        expect($solution->getSolutions($exception)[0]->getSolutionDescription())->toBe('Did you mean QuantaQuirk\Foundation\Auth\User::save() ?');
+        expect($solution->getSolutions($exception)[0]->getSolutionDescription())->toBe('Did you mean QuantaForge\Foundation\Auth\User::save() ?');
     }
 });
 

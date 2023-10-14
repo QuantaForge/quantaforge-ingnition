@@ -1,12 +1,12 @@
 <?php
 
-namespace QuantaQuirk\QuantaQuirkIgnition\Http\Controllers;
+namespace QuantaForge\QuantaForgeIgnition\Http\Controllers;
 
-use QuantaQuirk\Foundation\Validation\ValidatesRequests;
-use QuantaQuirk\Ignition\Contracts\SolutionProviderRepository;
-use QuantaQuirk\QuantaQuirkIgnition\Exceptions\CannotExecuteSolutionForNonLocalIp;
-use QuantaQuirk\QuantaQuirkIgnition\Http\Requests\ExecuteSolutionRequest;
-use QuantaQuirk\QuantaQuirkIgnition\Support\RunnableSolutionsGuard;
+use QuantaForge\Foundation\Validation\ValidatesRequests;
+use QuantaForge\Ignition\Contracts\SolutionProviderRepository;
+use QuantaForge\QuantaForgeIgnition\Exceptions\CannotExecuteSolutionForNonLocalIp;
+use QuantaForge\QuantaForgeIgnition\Http\Requests\ExecuteSolutionRequest;
+use QuantaForge\QuantaForgeIgnition\Support\RunnableSolutionsGuard;
 
 class ExecuteSolutionController
 {

@@ -1,9 +1,9 @@
 <?php
 
-use QuantaQuirk\FlareClient\Flare;
-use QuantaQuirk\FlareClient\Report;
-use QuantaQuirk\Ignition\Config\IgnitionConfig;
-use QuantaQuirk\Ignition\ErrorPage\ErrorPageViewModel;
+use QuantaForge\FlareClient\Flare;
+use QuantaForge\FlareClient\Report;
+use QuantaForge\Ignition\Config\IgnitionConfig;
+use QuantaForge\Ignition\ErrorPage\ErrorPageViewModel;
 
 it('can encode invalid user data', function () {
     $flareClient = app()->make(Flare::class);

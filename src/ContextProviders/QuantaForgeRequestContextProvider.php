@@ -1,18 +1,18 @@
 <?php
 
-namespace QuantaQuirk\QuantaQuirkIgnition\ContextProviders;
+namespace QuantaForge\QuantaForgeIgnition\ContextProviders;
 
-use QuantaQuirk\Database\Eloquent\Model;
-use QuantaQuirk\Http\Request as QuantaQuirkRequest;
-use QuantaQuirk\FlareClient\Context\RequestContextProvider;
+use QuantaForge\Database\Eloquent\Model;
+use QuantaForge\Http\Request as QuantaForgeRequest;
+use QuantaForge\FlareClient\Context\RequestContextProvider;
 use Symfony\Component\HttpFoundation\Request as SymphonyRequest;
 use Throwable;
 
-class QuantaQuirkRequestContextProvider extends RequestContextProvider
+class QuantaForgeRequestContextProvider extends RequestContextProvider
 {
-    protected QuantaQuirkRequest|SymphonyRequest|null $request;
+    protected QuantaForgeRequest|SymphonyRequest|null $request;
 
-    public function __construct(QuantaQuirkRequest $request)
+    public function __construct(QuantaForgeRequest $request)
     {
         $this->request = $request;
     }
@@ -52,7 +52,7 @@ class QuantaQuirkRequestContextProvider extends RequestContextProvider
     {
         /**
          * @phpstan-ignore-next-line
-         * @var \QuantaQuirk\Routing\Route|null $route
+         * @var \QuantaForge\Routing\Route|null $route
          */
         $route = $this->request->route();
 

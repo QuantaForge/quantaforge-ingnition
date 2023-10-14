@@ -1,10 +1,10 @@
 <?php
 
-use QuantaQuirk\Support\Facades\Log;
-use QuantaQuirk\Support\Facades\Route;
-use QuantaQuirk\FlareClient\Flare;
-use QuantaQuirk\QuantaQuirkIgnition\Support\SentReports;
-use QuantaQuirk\QuantaQuirkIgnition\Tests\Mocks\FakeClient;
+use QuantaForge\Support\Facades\Log;
+use QuantaForge\Support\Facades\Route;
+use QuantaForge\FlareClient\Flare;
+use QuantaForge\QuantaForgeIgnition\Support\SentReports;
+use QuantaForge\QuantaForgeIgnition\Tests\Mocks\FakeClient;
 
 beforeEach(function () {
     config()->set('logging.channels.flare.driver', 'flare');
@@ -149,7 +149,7 @@ it('will keep sent reports', function () {
     $this->fakeClient->assertRequestsSent(1);
 
     expect(app(SentReports::class)->all())->toHaveCount(1);
-    expect(\QuantaQuirk\QuantaQuirkIgnition\Facades\Flare::sentReports()->all())->toHaveCount(1);
+    expect(\QuantaForge\QuantaForgeIgnition\Facades\Flare::sentReports()->all())->toHaveCount(1);
 });
 
 // Datasets

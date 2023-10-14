@@ -1,9 +1,9 @@
 <?php
 
-namespace QuantaQuirk\QuantaQuirkIgnition\Http\Requests;
+namespace QuantaForge\QuantaForgeIgnition\Http\Requests;
 
-use QuantaQuirk\Foundation\Http\FormRequest;
-use QuantaQuirk\Validation\Rule;
+use QuantaForge\Foundation\Http\FormRequest;
+use QuantaForge\Validation\Rule;
 
 class UpdateConfigRequest extends FormRequest
 {

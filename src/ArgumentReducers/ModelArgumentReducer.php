@@ -1,12 +1,12 @@
 <?php
 
-namespace QuantaQuirk\QuantaQuirkIgnition\ArgumentReducers;
+namespace QuantaForge\QuantaForgeIgnition\ArgumentReducers;
 
-use QuantaQuirk\Database\Eloquent\Model;
-use QuantaQuirk\Backtrace\Arguments\ReducedArgument\ReducedArgument;
-use QuantaQuirk\Backtrace\Arguments\ReducedArgument\ReducedArgumentContract;
-use QuantaQuirk\Backtrace\Arguments\ReducedArgument\UnReducedArgument;
-use QuantaQuirk\Backtrace\Arguments\Reducers\ArgumentReducer;
+use QuantaForge\Database\Eloquent\Model;
+use QuantaForge\Backtrace\Arguments\ReducedArgument\ReducedArgument;
+use QuantaForge\Backtrace\Arguments\ReducedArgument\ReducedArgumentContract;
+use QuantaForge\Backtrace\Arguments\ReducedArgument\UnReducedArgument;
+use QuantaForge\Backtrace\Arguments\Reducers\ArgumentReducer;
 
 class ModelArgumentReducer implements ArgumentReducer
 {

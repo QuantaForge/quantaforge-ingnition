@@ -1,6 +1,6 @@
 <?php
 
-namespace QuantaQuirk\QuantaQuirkIgnition\Tests\stubs\Controllers;
+namespace QuantaForge\QuantaForgeIgnition\Tests\stubs\Controllers;
 
 class TestTypoController
 {

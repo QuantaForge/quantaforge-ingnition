@@ -1,14 +1,14 @@
 <?php
 
-namespace QuantaQuirk\QuantaQuirkIgnition\Tests;
+namespace QuantaForge\QuantaForgeIgnition\Tests;
 
-use QuantaQuirk\Foundation\Testing\Concerns\MakesHttpRequests;
-use QuantaQuirk\Http\Request;
-use QuantaQuirk\FlareClient\Glows\Glow;
-use QuantaQuirk\FlareClient\Report;
-use QuantaQuirk\QuantaQuirkIgnition\Facades\Flare;
-use QuantaQuirk\QuantaQuirkIgnition\IgnitionServiceProvider;
-use QuantaQuirk\QuantaQuirkIgnition\Tests\TestClasses\FakeTime;
+use QuantaForge\Foundation\Testing\Concerns\MakesHttpRequests;
+use QuantaForge\Http\Request;
+use QuantaForge\FlareClient\Glows\Glow;
+use QuantaForge\FlareClient\Report;
+use QuantaForge\QuantaForgeIgnition\Facades\Flare;
+use QuantaForge\QuantaForgeIgnition\IgnitionServiceProvider;
+use QuantaForge\QuantaForgeIgnition\Tests\TestClasses\FakeTime;
 use Symfony\Component\HttpFoundation\Request as SymfonyRequest;
 
 class TestCase extends \Orchestra\Testbench\TestCase

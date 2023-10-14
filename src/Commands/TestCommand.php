@@ -1,14 +1,14 @@
 <?php
 
-namespace QuantaQuirk\QuantaQuirkIgnition\Commands;
+namespace QuantaForge\QuantaForgeIgnition\Commands;
 
 use Composer\InstalledVersions;
 use Exception;
-use QuantaQuirk\Config\Repository;
-use QuantaQuirk\Console\Command;
-use QuantaQuirk\Log\LogManager;
-use QuantaQuirk\FlareClient\Flare;
-use QuantaQuirk\FlareClient\Http\Exceptions\BadResponseCode;
+use QuantaForge\Config\Repository;
+use QuantaForge\Console\Command;
+use QuantaForge\Log\LogManager;
+use QuantaForge\FlareClient\Flare;
+use QuantaForge\FlareClient\Http\Exceptions\BadResponseCode;
 
 class TestCommand extends Command
 {
@@ -100,7 +100,7 @@ class TestCommand extends Command
 
             $this->warn('Make sure that your key is correct and that you have a valid subscription.');
             $this->info('');
-            $this->info('For more info visit the docs on https://flareapp.io/docs/ignition-for-quantaquirk/introduction');
+            $this->info('For more info visit the docs on https://flareapp.io/docs/ignition-for-quantaforge/introduction');
             $this->info('You can see the status page of Flare at https://status.flareapp.io');
             $this->info('Flare support can be reached at support@flareapp.io');
 
@@ -109,10 +109,10 @@ class TestCommand extends Command
             $this->table([], [
                 ['Platform', PHP_OS],
                 ['PHP', phpversion()],
-                ['QuantaQuirk', app()->version()],
-                ['quantaquirk/ignition', InstalledVersions::getVersion('quantaquirk/ignition')],
-                ['quantaquirk/quantaquirk-ignition', InstalledVersions::getVersion('quantaquirk/quantaquirk-ignition')],
-                ['quantaquirk/flare-client-php', InstalledVersions::getVersion('quantaquirk/flare-client-php')],
+                ['QuantaForge', app()->version()],
+                ['quantaforge/ignition', InstalledVersions::getVersion('quantaforge/ignition')],
+                ['quantaforge/quantaforge-ignition', InstalledVersions::getVersion('quantaforge/quantaforge-ignition')],
+                ['quantaforge/flare-client-php', InstalledVersions::getVersion('quantaforge/flare-client-php')],
                 /** @phpstan-ignore-next-line */
                 ['Curl', curl_version()['version'] ?? 'Unknown'],
                 /** @phpstan-ignore-next-line */

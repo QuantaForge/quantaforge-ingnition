@@ -1,14 +1,14 @@
 <?php
 
-namespace QuantaQuirk\QuantaQuirkIgnition\Renderers;
+namespace QuantaForge\QuantaForgeIgnition\Renderers;
 
-use QuantaQuirk\FlareClient\Flare;
-use QuantaQuirk\Ignition\Config\IgnitionConfig;
-use QuantaQuirk\Ignition\Contracts\SolutionProviderRepository;
-use QuantaQuirk\Ignition\Ignition;
-use QuantaQuirk\QuantaQuirkIgnition\ContextProviders\QuantaQuirkContextProviderDetector;
-use QuantaQuirk\QuantaQuirkIgnition\Solutions\SolutionTransformers\QuantaQuirkSolutionTransformer;
-use QuantaQuirk\QuantaQuirkIgnition\Support\QuantaQuirkDocumentationLinkFinder;
+use QuantaForge\FlareClient\Flare;
+use QuantaForge\Ignition\Config\IgnitionConfig;
+use QuantaForge\Ignition\Contracts\SolutionProviderRepository;
+use QuantaForge\Ignition\Ignition;
+use QuantaForge\QuantaForgeIgnition\ContextProviders\QuantaForgeContextProviderDetector;
+use QuantaForge\QuantaForgeIgnition\Solutions\SolutionTransformers\QuantaForgeSolutionTransformer;
+use QuantaForge\QuantaForgeIgnition\Support\QuantaForgeDocumentationLinkFinder;
 use Throwable;
 
 class ErrorPageRenderer
@@ -17,8 +17,8 @@ class ErrorPageRenderer
     {
         $viteJsAutoRefresh = '';
 
-        if (class_exists('QuantaQuirk\Foundation\Vite')) {
-            $vite = app(\QuantaQuirk\Foundation\Vite::class);
+        if (class_exists('QuantaForge\Foundation\Vite')) {
+            $vite = app(\QuantaForge\Foundation\Vite::class);
 
             if (is_file($vite->hotFile())) {
                 $viteJsAutoRefresh = $vite->__invoke([]);
@@ -27,13 +27,13 @@ class ErrorPageRenderer
 
         app(Ignition::class)
             ->resolveDocumentationLink(
-                fn (Throwable $throwable) => (new QuantaQuirkDocumentationLinkFinder())->findLinkForThrowable($throwable)
+                fn (Throwable $throwable) => (new QuantaForgeDocumentationLinkFinder())->findLinkForThrowable($throwable)
             )
             ->setFlare(app(Flare::class))
             ->setConfig(app(IgnitionConfig::class))
             ->setSolutionProviderRepository(app(SolutionProviderRepository::class))
-            ->setContextProviderDetector(new QuantaQuirkContextProviderDetector())
-            ->setSolutionTransformerClass(QuantaQuirkSolutionTransformer::class)
+            ->setContextProviderDetector(new QuantaForgeContextProviderDetector())
+            ->setSolutionTransformerClass(QuantaForgeSolutionTransformer::class)
             ->applicationPath(base_path())
             ->addCustomHtmlToHead($viteJsAutoRefresh)
             ->renderException($throwable);

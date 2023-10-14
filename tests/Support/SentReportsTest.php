@@ -1,7 +1,7 @@
 <?php
 
-use QuantaQuirk\FlareClient\Report;
-use QuantaQuirk\QuantaQuirkIgnition\Support\SentReports;
+use QuantaForge\FlareClient\Report;
+use QuantaForge\QuantaForgeIgnition\Support\SentReports;
 
 beforeEach(function () {
     $this->sentReports = new SentReports();

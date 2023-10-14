@@ -1,7 +1,7 @@
 <?php
 
-use QuantaQuirk\Support\Str;
-use QuantaQuirk\QuantaQuirkIgnition\Solutions\SolutionProviders\MissingViteManifestSolutionProvider;
+use QuantaForge\Support\Str;
+use QuantaForge\QuantaForgeIgnition\Solutions\SolutionProviders\MissingViteManifestSolutionProvider;
 
 it('can solve a missing Vite manifest exception', function () {
     $canSolve = app(MissingViteManifestSolutionProvider::class)
@@ -13,7 +13,7 @@ it('can solve a missing Vite manifest exception', function () {
 it('recommends running `npm run dev` in a local environment', function () {
     app()->detectEnvironment(fn () => 'local');
 
-    /** @var \QuantaQuirk\Ignition\Contracts\Solution $solution */
+    /** @var \QuantaForge\Ignition\Contracts\Solution $solution */
     $solution = app(MissingViteManifestSolutionProvider::class)
         ->getSolutions(new Exception('Vite manifest not found at: public/build/manifest.json'))[0];
 
@@ -24,7 +24,7 @@ it('recommends running `npm run dev` in a local environment', function () {
 it('recommends running `npm run build` in a production environment', function () {
     app()->detectEnvironment(fn () => 'production');
 
-    /** @var \QuantaQuirk\Ignition\Contracts\Solution $solution */
+    /** @var \QuantaForge\Ignition\Contracts\Solution $solution */
     $solution = app(MissingViteManifestSolutionProvider::class)
         ->getSolutions(new Exception('Vite manifest not found at: public/build/manifest.json'))[0];
 
@@ -37,7 +37,7 @@ it('detects the package manager and adapts the recommended command', function (s
 
     file_put_contents(base_path($lockfile), '');
 
-    /** @var \QuantaQuirk\Ignition\Contracts\Solution $solution */
+    /** @var \QuantaForge\Ignition\Contracts\Solution $solution */
     $solution = app(MissingViteManifestSolutionProvider::class)
         ->getSolutions(new Exception('Vite manifest not found at: public/build/manifest.json'))[0];
 

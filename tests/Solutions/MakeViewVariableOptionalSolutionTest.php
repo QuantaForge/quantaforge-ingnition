@@ -1,8 +1,8 @@
 <?php
 
-use QuantaQuirk\Support\Facades\View;
-use QuantaQuirk\QuantaQuirkIgnition\Solutions\MakeViewVariableOptionalSolution;
-use QuantaQuirk\QuantaQuirkIgnition\Support\Composer\ComposerClassMap;
+use QuantaForge\Support\Facades\View;
+use QuantaForge\QuantaForgeIgnition\Solutions\MakeViewVariableOptionalSolution;
+use QuantaForge\QuantaForgeIgnition\Support\Composer\ComposerClassMap;
 
 beforeEach(function () {
     View::addLocation(__DIR__.'/../stubs/views');

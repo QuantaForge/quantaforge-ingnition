@@ -1,9 +1,9 @@
 <?php
 
-namespace QuantaQuirk\QuantaQuirkIgnition\Solutions;
+namespace QuantaForge\QuantaForgeIgnition\Solutions;
 
-use QuantaQuirk\Support\Facades\Artisan;
-use QuantaQuirk\Ignition\Contracts\RunnableSolution;
+use QuantaForge\Support\Facades\Artisan;
+use QuantaForge\Ignition\Contracts\RunnableSolution;
 
 class RunMigrationsSolution implements RunnableSolution
 {
@@ -27,7 +27,7 @@ class RunMigrationsSolution implements RunnableSolution
     public function getDocumentationLinks(): array
     {
         return [
-            'Database: Running Migrations docs' => 'https://quantaquirk.com/docs/master/migrations#running-migrations',
+            'Database: Running Migrations docs' => 'https://quantaforge.com/docs/master/migrations#running-migrations',
         ];
     }
 

@@ -1,9 +1,9 @@
 <?php
 
-namespace QuantaQuirk\QuantaQuirkIgnition\Support;
+namespace QuantaForge\QuantaForgeIgnition\Support;
 
-use QuantaQuirk\Support\Arr;
-use QuantaQuirk\FlareClient\Report;
+use QuantaForge\Support\Arr;
+use QuantaForge\FlareClient\Report;
 
 class SentReports
 {

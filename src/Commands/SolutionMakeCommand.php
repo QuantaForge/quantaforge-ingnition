@@ -1,8 +1,8 @@
 <?php
 
-namespace QuantaQuirk\QuantaQuirkIgnition\Commands;
+namespace QuantaForge\QuantaForgeIgnition\Commands;
 
-use QuantaQuirk\Console\GeneratorCommand;
+use QuantaForge\Console\GeneratorCommand;
 use Symfony\Component\Console\Input\InputOption;
 
 class SolutionMakeCommand extends GeneratorCommand

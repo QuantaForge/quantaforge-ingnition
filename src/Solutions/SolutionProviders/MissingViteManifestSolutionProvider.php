@@ -1,18 +1,18 @@
 <?php
 
-namespace QuantaQuirk\QuantaQuirkIgnition\Solutions\SolutionProviders;
+namespace QuantaForge\QuantaForgeIgnition\Solutions\SolutionProviders;
 
-use QuantaQuirk\Support\Str;
-use QuantaQuirk\Ignition\Contracts\BaseSolution;
-use QuantaQuirk\Ignition\Contracts\HasSolutionsForThrowable;
-use QuantaQuirk\Ignition\Contracts\Solution;
+use QuantaForge\Support\Str;
+use QuantaForge\Ignition\Contracts\BaseSolution;
+use QuantaForge\Ignition\Contracts\HasSolutionsForThrowable;
+use QuantaForge\Ignition\Contracts\Solution;
 use Throwable;
 
 class MissingViteManifestSolutionProvider implements HasSolutionsForThrowable
 {
     /** @var array<string, string> */
     protected array $links = [
-        'Asset bundling with Vite' => 'https://quantaquirk.com/docs/9.x/vite#running-vite',
+        'Asset bundling with Vite' => 'https://quantaforge.com/docs/9.x/vite#running-vite',
     ];
 
     public function canSolve(Throwable $throwable): bool

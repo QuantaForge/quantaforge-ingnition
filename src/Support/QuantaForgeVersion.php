@@ -1,8 +1,8 @@
 <?php
 
-namespace QuantaQuirk\QuantaQuirkIgnition\Support;
+namespace QuantaForge\QuantaForgeIgnition\Support;
 
-class QuantaQuirkVersion
+class QuantaForgeVersion
 {
     public static function major(): string
     {

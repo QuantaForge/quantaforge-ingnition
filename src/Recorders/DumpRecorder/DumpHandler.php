@@ -1,6 +1,6 @@
 <?php
 
-namespace QuantaQuirk\QuantaQuirkIgnition\Recorders\DumpRecorder;
+namespace QuantaForge\QuantaForgeIgnition\Recorders\DumpRecorder;
 
 use Symfony\Component\VarDumper\Cloner\VarCloner;
 

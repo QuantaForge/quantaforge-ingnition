@@ -1,6 +1,6 @@
 <?php
 
-namespace QuantaQuirk\QuantaQuirkIgnition\Tests\stubs\Components;
+namespace QuantaForge\QuantaForgeIgnition\Tests\stubs\Components;
 
 use Livewire\Component;
 

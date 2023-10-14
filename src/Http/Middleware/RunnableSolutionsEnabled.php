@@ -1,9 +1,9 @@
 <?php
 
-namespace QuantaQuirk\QuantaQuirkIgnition\Http\Middleware;
+namespace QuantaForge\QuantaForgeIgnition\Http\Middleware;
 
 use Closure;
-use QuantaQuirk\QuantaQuirkIgnition\Support\RunnableSolutionsGuard;
+use QuantaForge\QuantaForgeIgnition\Support\RunnableSolutionsGuard;
 
 class RunnableSolutionsEnabled
 {

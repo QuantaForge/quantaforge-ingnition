@@ -1,9 +1,9 @@
 <?php
 
-namespace QuantaQuirk\QuantaQuirkIgnition\Solutions;
+namespace QuantaForge\QuantaForgeIgnition\Solutions;
 
 use Livewire\LivewireComponentsFinder;
-use QuantaQuirk\Ignition\Contracts\RunnableSolution;
+use QuantaForge\Ignition\Contracts\RunnableSolution;
 
 class LivewireDiscoverSolution implements RunnableSolution
 {
@@ -27,7 +27,7 @@ class LivewireDiscoverSolution implements RunnableSolution
     public function getDocumentationLinks(): array
     {
         return [
-            'Livewire: Artisan Commands' => 'https://quantaquirk-livewire.com/docs/2.x/artisan-commands',
+            'Livewire: Artisan Commands' => 'https://quantaforge-livewire.com/docs/2.x/artisan-commands',
         ];
     }
 

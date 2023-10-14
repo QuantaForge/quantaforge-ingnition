@@ -1,6 +1,6 @@
 <?php
 
-namespace QuantaQuirk\QuantaQuirkIgnition\Tests\TestClasses;
+namespace QuantaForge\QuantaForgeIgnition\Tests\TestClasses;
 
 use Livewire\LivewireManager;
 
